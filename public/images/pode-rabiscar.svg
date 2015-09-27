@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="111px" height="72px" viewBox="0 0 111 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Pode rabiscar!</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing" sketch:type="MSArtboardGroup" transform="translate(-297.000000, -2409.000000)" stroke="#8F2F23" stroke-width="2">
+            <g id="Faixa-:-Conheça-o-mapa" sketch:type="MSLayerGroup" transform="translate(0.000000, 1997.000000)">
+                <g id="Conheça-o-mapa" transform="translate(268.000000, 44.000000)" sketch:type="MSShapeGroup">
+                    <g id="Pode-rabiscar!" transform="translate(29.000000, 368.000000)">
+                        <path d="M61.7030994,61 L101.517557,61" id="Line-10" stroke-linecap="square"></path>
+                        <path d="M9.56669999,61 L49.3811577,61" id="Line-9" stroke-linecap="square"></path>
+                        <path d="M61.7030994,51 L101.517557,51" id="Line-8" stroke-linecap="square"></path>
+                        <path d="M9.56669999,51 L49.3811577,51" id="Line-7" stroke-linecap="square"></path>
+                        <path d="M61.7030994,41 L101.517557,41" id="Line-6" stroke-linecap="square"></path>
+                        <path d="M9.56669999,41 L49.3811577,41" id="Line-5" stroke-linecap="square"></path>
+                        <path d="M61.7030994,31 L101.517557,31" id="Line-4" stroke-linecap="square"></path>
+                        <path d="M9.56669999,31 L49.3811577,31" id="Line-3" stroke-linecap="square"></path>
+                        <path d="M61.7030994,20 L101.517557,20" id="Line-2" stroke-linecap="square"></path>
+                        <path d="M9.56669999,20 L49.3811577,20" id="Line" stroke-linecap="square"></path>
+                        <rect id="Rectangle-96" x="0" y="0.553846154" width="111" height="70.8923077"></rect>
+                        <rect id="Rectangle-96" x="0" y="0.553846154" width="111" height="10.4461538"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

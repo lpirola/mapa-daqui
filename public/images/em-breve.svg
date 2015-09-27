@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="224px" height="60px" viewBox="0 0 224 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Em breve!</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="224" height="60" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing" sketch:type="MSArtboardGroup" transform="translate(-847.000000, -3135.000000)">
+            <g id="FAIXA:-Conheça-os-mapas" sketch:type="MSLayerGroup" transform="translate(178.000000, 2645.000000)">
+                <g id="Em-breve!" transform="translate(669.000000, 490.000000)">
+                    <g id="Rectangle-142" opacity="0.833022388">
+                        <use fill="#4C4C4C" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                        <use fill-opacity="0.5" fill="none" xlink:href="#path-1"></use>
+                    </g>
+                    <text id="EM-BREVE!" sketch:type="MSTextLayer" font-family="Montserrat" font-size="22.5882353" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="74" y="37">EM BREVE!</tspan>
+                    </text>
+                    <path d="M33.8715994,23.7811233 L37.2539435,23.7811233 C37.4301141,20.697474 39.1480281,17.3473803 43.3421729,17.3473803 C47.3878182,17.3473803 49.2071759,20.8783919 49.4304023,23.7811233 L52.8127464,23.7811233 C52.7518801,18.2981809 49.6536789,14.2317903 43.3421729,14.1798805 C37.0716462,14.1221286 33.8715994,18.3888314 33.8715994,23.7811233 L33.8715994,23.7811233 Z M31.8421729,26.8584035 L31.8421729,37.8242882 C31.8421729,39.4304254 32.2213313,39.9074778 33.8715994,39.9074778 L52.8127464,39.9074778 C54.5780175,39.9074778 54.8421729,39.4565718 54.8421729,37.8242882 L54.8421729,26.8584035 C54.8421729,25.2721875 54.5310119,25.0712527 52.8127464,25.0712527 L33.8715994,25.0712527 C32.2412685,25.0712527 31.8421729,25.3554154 31.8421729,26.8584035 L31.8421729,26.8584035 Z M45.4930306,31.3737368 C45.4930306,32.2832587 44.8773878,33.1256905 44.02511,33.3963012 L45.3715994,36.6821781 L41.3127464,36.6821781 L42.6589345,33.3963012 C41.8066065,33.1254032 41.1910139,32.3203234 41.1910139,31.4108015 C41.1910139,30.2755393 42.1515653,29.3408767 43.3418214,29.3408767 C44.5320774,29.3408767 45.4930306,30.2384746 45.4930306,31.3737368 L45.4930306,31.3737368 Z" id="Imported-Layers" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

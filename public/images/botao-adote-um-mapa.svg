@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="270px" height="61px" viewBox="0 0 270 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.4 (305) - http://www.bohemiancoding.com/sketch -->
+    <title>Botão adote um mapa</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="-4" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.872502126   0 0 0 0 0.872502126   0 0 0 0 0.872502126  0 0 0 0.7 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing" sketch:type="MSArtboardGroup" transform="translate(-674.000000, -1071.000000)">
+            <g id="Faixa:-Adote-um-mapa" sketch:type="MSLayerGroup" transform="translate(-25.500000, 995.000000)">
+                <g id="Botão-adote-um-mapa" transform="translate(700.000000, 76.000000)">
+                    <rect id="Rectangle-5" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0.316034098" y="0.678832918" width="268.683966" height="60"></rect>
+                    <path d="M224.290831,15.6788329 L221.51776,19.8982678 L228.009226,26.3900954 L212.889102,26.3900954 L212.888018,30.4096205 L228.008503,30.4103435 L221.695618,36.7228668 L224.469773,39.4962993 L235.566034,28.3996772 L224.290831,17.1248353" id="Seta" fill="#BFBDBB" sketch:type="MSShapeGroup"></path>
+                    <text id="Adote-um-mapa" sketch:type="MSTextLayer" font-family="Montserrat" font-size="21" font-weight="bold" fill="#6C635D">
+                        <tspan x="20.3160341" y="35.6788329">Adote um mapa</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

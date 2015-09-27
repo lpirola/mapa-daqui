@@ -1,0 +1,299 @@
+doctype html
+html(lang="en")
+	meta(charset="utf-8")
+	head
+		link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet')
+		title Mapa Daqui
+		style.
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+			  margin: 0;
+			  padding: 0;
+			  border: 0;
+			  outline: 0;
+			  font-weight: inherit;
+			  font-style: inherit;
+			  font-family: inherit;
+			  font-size: 100%;
+			  vertical-align: baseline;
+			}
+
+			body {
+			  line-height: 1;
+			  color: #222;
+			  background: #fff;
+			  margin: 0;
+			  padding: 0;
+			  font-family: 'Montserrat', sans-serif;
+			}
+
+			#map.mapbox {
+			  position: absolute;
+			  top: 0;
+			  bottom: 0;
+			  width: 100%;
+			}
+
+			ol,
+			ul {
+			  list-style: none;
+			}
+
+			table {
+			  border-collapse: separate;
+			  border-spacing: 0;
+			  vertical-align: middle;
+			}
+
+			caption,
+			th,
+			td {
+			  text-align: left;
+			  font-weight: normal;
+			  vertical-align: middle;
+			}
+			a img {
+			  border: none;
+			}
+			html { box-sizing: border-box; }
+			*, *:before, *:after { box-sizing: inherit; }
+
+			.title-logo {
+				background-color: #EF4B4C;
+				text-align: center;
+				padding: 60px 0 0 0;
+				height: 200px;
+				width: 1100px;
+			}
+			.follow-row {
+				height: 190px;
+				width: 1100px;
+				border-bottom: 7px solid rgba(109,110,112,.1);
+			}
+			.right {
+				text-align: right;
+				border: 0;
+			}
+			.follow-row img {
+				margin: 60px;
+			}
+
+			.big-map {
+				height: 780px;
+				position: relative;
+			}
+			.big-map img {
+				position: absolute;
+			}
+			.big-map .distancia {
+				top: 150px;
+				left: 300px;
+			}
+			.coluna {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.lista-favoritos{
+				padding: 50px;
+				position: relative;
+			}
+			.lista-favoritos .mapa {
+				position: relative;
+				height: 470px;
+				width: 410px;
+			}
+			.lista-favoritos .mapa img {
+				position:absolute;
+			}
+			.lista-favoritos .mapa .distancia {
+				top: 100px;
+				left: 75px;
+			}
+			.lista-favoritos .coluna {
+				width: 50%;
+			}
+			.lista ul {
+				display: block;
+			}
+			.lista ul li {
+				padding: 20px 9px 0;
+				float: left;
+			}
+			.lista-favoritos .titulo {
+				background-color: #EF4B4C;
+				color: #fff;
+				font-weight: bold;
+				padding: 20px;
+				text-align: center;
+			}
+			.lista .text {
+				display: inline-block;
+				width: 230px;
+			}
+			.lista .circle {
+				display: inline-block;
+				border: 2px solid #BBBDC0;
+				border-radius: 40px;
+				width: 40px;
+				height: 40px;
+			}
+			.lista .dash {
+				display: inline-block;
+				border-bottom: 2px solid #BBBDC0;
+				width: 190px;
+				height: 40px;
+			}
+			.rodape {
+				position: relative;
+				height: 200px;
+				width: 1100px;
+				background-color: #EF4B4C;
+			}
+			.rodape .coluna {
+				width: 20%;
+				height: 200px;
+				padding: 25px;
+			}
+			.rodape .coluna.small {
+				width: 10%;
+			}
+			.rodape .coluna img { height: 35px; }
+			.rodape .coluna .qr { height: 120px; }
+			.rodape .coluna .auto { height: auto; margin: 15px; }
+			.rodape .coluna p { margin: 10px 0; color: #fff; }
+			.rodape .coluna .titulo { font-weight: bold; }
+
+	body
+		.title-logo
+			img(src="http://new.mapadaqui.org/images/logo-horizontal-fundo-escuro.svg", height=75, width=570)
+		.follow-row
+			img(src="http://new.mapadaqui.org/images/arrow-up.svg", width=62, height=62)
+		.follow-row
+			img(src="http://new.mapadaqui.org/images/arrow-left.svg", width=62, height=62)
+		.follow-row.right
+			img(src="http://new.mapadaqui.org/images/arrow-right.svg", width=62, height=62)
+
+		.big-map
+			img(src='https://api.mapbox.com/v4/' + mapbox.map_name + '/' + lng + ',' + lat + ',17/1100x780.png32?access_token=' + mapbox.access_token, alt="mapa daqui", height=780, width=1100)
+			img.distancia(src='http://new.mapadaqui.org/images/target-5-minutos.png', width=501, height=501)
+
+		.lista-favoritos
+			.mapa.coluna
+				img(src='https://api.mapbox.com/v4/' + mapbox.map_name + '/' + lng + ',' + lat + ',15/430x470.png32?access_token=' + mapbox.access_token, alt="mapa daqui", height=470, width=430)
+				img.distancia(src='http://new.mapadaqui.org/images/target-15-minutos.png', width=280, height=280)
+			.lista.coluna
+				p.titulo LISTA DE LUGARES PRÓXIMOS DAQUI
+				ul
+					li
+						span.text
+							img(src='http://new.mapadaqui.org/images/estou-aqui.png', width=215, height=35)
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+					li
+						span.circle
+						span.dash
+		.rodape
+			.coluna.small
+				img.auto(src="http://new.mapadaqui.org/images/logo-lambe-lambe.svg", height=170)
+			.coluna
+				img(src="http://new.mapadaqui.org/images/rodape-icon-rabiscar.svg")
+				p.titulo PODE RABISCAR
+				p.sub-titulo Indique lugares do bairro que você queira compartilhar
+			.coluna
+				img(src="http://new.mapadaqui.org/images/rodape-icon-adote-mapa.svg")
+				p.titulo ADOTE UM MAPA
+				p.sub-titulo Baixe gratuitamente o arquivo para imprimir e espalhar por aí.
+			.coluna
+				img(src="http://new.mapadaqui.org/images/rodape-icon-parceiro.svg")
+				p.titulo SEJA UM PARCEIRO
+				p.sub-titulo Coloque seu comércio no mapa tornando-se um parceiro local do projeto.
+			.coluna
+				img(src="http://new.mapadaqui.org/images/rodape-icon-mobile.svg")
+				p.titulo VERSÃO ONLINE
+				p.sub-titulo Descubra e envie recomendações, histórias, e mais!
+			.coluna.small
+				img.qr(src="http://new.mapadaqui.org/images/qr-code.svg", height=100)

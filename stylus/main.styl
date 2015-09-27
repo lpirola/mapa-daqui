@@ -1,0 +1,229 @@
+@import 'jeet'
+@import 'colors.import'
+@import 'fonts.import'
+
+global-reset()
+//webfont('Open Sans', 'opensans-regular-webfont')
+//webfont('Montserrat', 'montserrat-regular-webfont', false, 'bold')
+
+html
+	box-sizing: border-box
+*, *:before, *:after
+	box-sizing: inherit
+body
+	background-color: light-grey
+	//font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	color: brownish-grey
+	font-size: 14px
+	line-height: 1.2
+a
+	text-decoration: none
+	color: brownish-grey
+	&:hover
+		text-decoration: underline
+h2
+	font-weight: bold
+	font-size: 2.5em
+input
+	height: 3em
+	border: 0
+	padding: 0 1em
+	font-size: 1em
+	color: brownish-grey
+	border-bottom: .2em solid #e2e2e2
+
+@import 'buttons.import.styl'
+
+.container
+	center(960px)
+.header
+	text-align: center
+	background-color: watermelon
+	padding: 1em 0
+.footer
+	col(1)
+	background-color: greyish-brown
+	padding: 3.5em 0
+	.logo
+		col(4/12)
+	.perfis-sociais
+		col(4/12, 4/12)
+		text-align: right
+		a
+			padding: 0 0 0 1em
+.icon-arrow-right
+	display: inline-block
+	background: top left url('/images/arrow-right.svg') no-repeat transparent
+	background-size: cover
+	width: 30px
+	height: 30px
+	vertical-align: top
+	margin: 13px 0 0 13px
+.primary .icon-arrow-right
+	background-image: url('/images/arrow-right-red.png')
+.box-adote-um-mapa
+	text-align: center
+	h2
+		font-size: 1.5em
+		margin: 1em 0
+	.button.confirmar
+		col(1)
+		margin-bottom: 2em
+		font-weight: bold
+.form-panel
+	col(8/12, 2/12)
+	margin-bottom: 2em
+	input[type=text], input[type=email]
+		span(8/10)
+		text-align: left
+		margin-bottom: 1.5em
+	.button
+		span(2/10)
+		text-align:center
+		margin-bottom: 1.5em
+	&.small
+		col(6/12, 3/12)
+		h3
+			font-weight: bold
+			font-size: 1.5em
+			margin: 0 0 1em
+			text-align: center
+			color: grapefruit
+#map
+	height: 26em
+	border: .1em solid greyish
+	margin-top: 2em
+	margin-bottom: 2em
+.success-board
+	margin-top: 5em
+	margin-bottom: 5em
+	padding: 1.5em
+	background-color: white
+	col(8/12, 2/12)
+	a
+		font-weight: bold
+	.image-featured
+		col(1/3)
+	.text-featured
+		col(2/3)
+		h2
+			font-weight: bold
+			font-size: 1.3em
+			margin-bottom: 1.5em
+
+.row
+	col(1)
+	min-height: 10em
+	.featured
+		img
+			max-width: 100%
+
+.row.destaque
+	padding: 5em
+	background-size: cover
+	background-image: url(/images/selected-03840.png)
+	p
+		color: white
+		font-size: 1.7em
+		max-width: 35%
+		margin: 1em 0
+
+.row.como-funciona
+	background-color: watermelon
+	text-align: center
+	color: #fff
+	padding: 3em 0
+	h2
+		padding: 0 0 1em
+		font-size: 2em
+	.column
+		col(1/3)
+		padding: 0 1.5em
+		.box-img
+			height: 7em
+			line-height: 7em
+			img
+				vertical-align: middle
+		p
+			margin: 1.5em 0
+			&.description
+				font-size: .8em
+
+.row.adote-um-mapa
+	background-color: light-grey-blue
+	padding: 3em 0
+	.column
+		col(1/2)
+		.description
+			color: white
+			margin: 2em 0
+		ul li
+			span(1/2)
+			margin: 1em 0
+			img, p
+				display: inline-block
+			img
+				margin: 0 1em 0 0
+			p
+				margin: 0 .5em 0 0
+				width: 70%
+				font-size: .8em
+				vertical-align: top
+.row.audio-guia
+	background-color: light-sage
+	padding: 3em 0
+	.column
+		col(1/2)
+		.description
+			color: white
+			margin: 2em 0
+
+.row.conheca
+	background: 50% 50% url('/images/painel-poste.jpg') no-repeat transparent;
+	background-size: cover;
+	.box-ajudar
+		color: white
+		col(5/12, 1/12)
+		padding: 4em 0
+		h2
+			background-color: brownish-red
+			text-transform: uppercase
+			padding: 1.5em 0
+			font-size: 1em
+			text-align: center
+		.item
+			background-color: watermelon
+			col(1)
+			padding: 1em
+			img
+				span(1/3)
+			p
+				padding: 0 0 1em 1em
+				opacity: .5
+				span(2/3)
+				&.title
+					font-weight: bold
+					opacity: 1
+
+.row.formato
+	background-color: white
+	text-align: center
+	padding: 3em 0
+	h2
+		font-size: 1.5em
+		padding: 0 0 2.5em 0
+	.item
+		col(1/3)
+		h3
+			font-size: 1.5em
+			padding: 1em 0
+			font-weight: bold
+		img
+			max-width: 100%
+		p
+			padding: 0 0 2.5em 0
+			opacity: .7
+
+@import "ajustes-neumann.import"
+@import "mobile.import"
