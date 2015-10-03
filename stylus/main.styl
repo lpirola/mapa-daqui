@@ -1,7 +1,7 @@
 @import 'jeet'
 @import 'colors.import'
 @import 'fonts.import'
-
+@import 'animate.import'
 global-reset()
 //webfont('Open Sans', 'opensans-regular-webfont')
 //webfont('Montserrat', 'montserrat-regular-webfont', false, 'bold')
@@ -29,9 +29,10 @@ input
 	height: 3em
 	border: 0
 	padding: 0 1em
-	font-size: 1em
+	font-size: 1.4em
+	font-family: Montserrat
 	color: brownish-grey
-	border-bottom: .2em solid #e2e2e2
+	border-bottom: .3em solid #e3e3e3
 
 @import 'buttons.import.styl'
 
@@ -66,24 +67,34 @@ input
 	text-align: center
 	h2
 		font-size: 1.5em
-		margin: 1em 0
+		margin: 2em 0
 	.button.confirmar
 		col(1)
 		margin-bottom: 2em
 		font-weight: bold
+	.buscar
+		padding: 0
+		img
+			margin-top: 16px
 .form-panel
 	col(8/12, 2/12)
 	margin-bottom: 2em
 	input[type=text], input[type=email]
-		span(8/10)
+		span(9/10)
 		text-align: left
 		margin-bottom: 1.5em
 	.button
-		span(2/10)
+		span(1/10)
 		text-align:center
 		margin-bottom: 1.5em
 	&.small
 		col(6/12, 3/12)
+		input[type=text], input[type=email]
+			span(8/10)
+		.button
+			span(2/10)
+			i
+				margin: 13px 0 0 0
 		h3
 			font-weight: bold
 			font-size: 1.5em
@@ -93,7 +104,7 @@ input
 #map
 	height: 26em
 	border: .1em solid greyish
-	margin-top: 2em
+	margin-top: 11em
 	margin-bottom: 2em
 .success-board
 	margin-top: 5em
@@ -224,6 +235,13 @@ input
 		p
 			padding: 0 0 2.5em 0
 			opacity: .7
+.flash_message
+	col(1)
+	background-color: #dff0d8
+	color: #3c763d
+	border: 1px solid #d6e9c6
+	padding: 1em
+	text-align: center
 
 @import "ajustes-neumann.import"
 @import "mobile.import"

@@ -207,8 +207,13 @@
 			<h3>Inscreva-se para receber novidades :)</h3>
 			<input id="email_subscribe" type="email" placeholder="Seu email" required>
 			<button type="submit" class="button salvar primary icon">
-				<img src="/images/arrow-right.svg" alt="" width=25 height=25 />
+				<i class="icon-arrow-right"></i>
 			</button>
+			{{#if flash_message}}
+				<p class="animated flash flash_message">
+					{{flash_message}}
+				</p>
+			{{/if}}
 		</form>
 	</div>
 </template>
