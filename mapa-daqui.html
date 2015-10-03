@@ -150,6 +150,9 @@
 				<h2>Torne-se um parceiro</h2>
 				<p>Tem um estabelecimento comercial? É de uma associação ou prefeitura? Gosta do projeto e quer conectar? Descubra o que podemos fazer juntos :)</p>
 				<form name="parceiro">
+					{{#if flash_message}}
+						<p class="animated flash flash_message">{{flash_message}}</p>
+					{{/if}}
 					<input required type="text" value="" id="nome_parceiro" placeholder="Seu nome" />
 					<textarea required id="mensagem_parceiro" rows="8" cols="40" placeholder="Mensagem"></textarea>
 					<button type="submit" value="Enviar" class="button primary">Enviar</button>
@@ -246,12 +249,6 @@
 					</button>
 				</form>
 				<!--End mc_embed_signup-->
-		
-			{{#if flash_message}}
-				<p class="animated flash flash_message">
-					{{flash_message}}
-				</p>
-			{{/if}}
 		</form>
 	</div>
 </template>

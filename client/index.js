@@ -29,7 +29,14 @@ Meteor.startup(function() {
 Template.home.events({
 	'submit form' : function () {
 		Meteor.call('sendEmail', Session.get('nome_parceiro'), Session.get('mensagem_parceiro'), function (error, result) {
-			console.log(error, result);
+			if (error === undefined) {
+				Session.set('flash_message', 'E-mail enviado com sucesso.');
+				Session.set('nome_parceiro', '');
+				Session.set('mensagem_parceiro', '');
+			} else {
+				Session.set('flash_message', 'E-mail não enviado, tente novamente.');
+			}
+			setTimeout(function () { Session.set('flash_message', ''); }, 5000);
 		});
 		return false;
 	},
@@ -39,6 +46,12 @@ Template.home.events({
 	'change #mensagem_parceiro' : function(evt) {
 		Session.set('mensage_parceiro', evt.currentTarget.value);
 	},
+});
+
+Template.home.helpers({
+	flash_message: function() {
+		return Session.get('flash_message');
+	}
 });
 
 Template.admin_lucas.helpers({
@@ -73,35 +86,4 @@ Template.adotar_mapa.events({
 		});
 		return false;
 	}
-});
-
-var updateEmail = function (evt) {
-	Meteor.call('updateEmail', Session.get('signId'), Session.get('email'), function (error, result) {
-		if (typeof error !== undefined) {
-			Session.set('flash_message', 'Erro ao tentar gravar email.');
-		} else {
-			Session.set('flash_message', 'E-mail salvo com sucesso.');
-		}
-		setTimeout(function () { Session.set('email', ''); Session.set('flash_message', ''); }, 5000);
-	});
-	return false;
-};
-
-Template.imprimir_pdf.helpers({
-	flash_message: function() {
-		return Session.get('flash_message');
-	}
-});
-
-Template.imprimir_pdf.events({
-	'keypress #email_subscribe' : function(evt) {
-		if (evt.keyCode == 13) {
-			Session.set('email', evt.currentTarget.value);
-			updateEmail();
-		}
-	},
-	'submit form': updateEmail,
-	'change #email_subscribe' : function(evt) {
-		Session.set('email', evt.currentTarget.value);
-	},
 });
