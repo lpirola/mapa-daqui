@@ -14,7 +14,7 @@ Meteor.publish("signs", function () {
 });
 Meteor.methods({
 	'addSign': function(address, lat, lng) {
-		return Signs.insert({address: address, lat:lat, lng:lng});
+		return Signs.insert({address: address, lat:lat, lng:lng, email:''});
 	},
 	'updateEmail': function(signId, email) {
 		return Signs.update(signId, {$set: {email:email}});
@@ -24,7 +24,8 @@ Meteor.methods({
 		var locals = {
 			mapbox: {
 					access_token: 'pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ',
-		},
+					map_name: 'mapadaqui.2586fca1'
+			},
 			lat : currentSign.lat,
 			lng : currentSign.lng
 		};
