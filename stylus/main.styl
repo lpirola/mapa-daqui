@@ -45,6 +45,10 @@ button
 	text-align: center
 	background-color: watermelon
 	padding: 1em 0
+	height:60px;
+	a
+		img
+			margin-top:3px;
 .footer
 	col(1)
 	background-color: greyish-brown
@@ -133,7 +137,7 @@ button
 .success-board
 	margin-top: 5em
 	margin-bottom: 5em
-	padding: 1.5em
+	padding: 3em
 	background-color: white
 	col(8/12, 2/12)
 	a
@@ -141,11 +145,16 @@ button
 	.image-featured
 		col(1/3)
 	.text-featured
+		margin-top: 1em
 		col(2/3)
 		h2
 			font-weight: bold
 			font-size: 1.3em
 			margin-bottom: 1.5em
+	p
+		opacity:0.4
+		a
+			text-decoration:underline
 
 .row
 	col(1)
@@ -163,7 +172,7 @@ button
 		color: white
 		font-size: 1.7em
 		max-width: 35%
-		margin: 1em 0
+		margin: 3em 0
 
 .row.como-funciona
 	background-color: watermelon
@@ -182,8 +191,12 @@ button
 				vertical-align: middle
 		p
 			margin: 1.5em 0
+			font-size:1.3em
+			font-weight: bold
 			&.description
-				font-size: .8em
+				font-weight: normal
+				opacity:0.7
+				font-size: .9em
 
 .row.adote-um-mapa
 	background-color: light-grey-blue
@@ -192,6 +205,7 @@ button
 		.description
 			color: white
 			margin: 2em 0
+			font-size:1.4em
 		ul li
 			span(1/2)
 			margin: 1em 0
@@ -201,9 +215,11 @@ button
 				margin: 0 1em 0 0
 			p
 				margin: 0 .5em 0 0
-				width: 70%
-				font-size: .8em
+				width: 60%
 				vertical-align: top
+				color:#6a908b
+				font-size:0.9em
+
 .row.audio-guia
 	background-color: light-sage
 	.column
@@ -283,5 +299,7 @@ button
 	padding: 1em
 	text-align: center
 
-@import "ajustes-neumann.import"
+.column.description
+	font-size:1.4em
+
 @import "mobile.import"
