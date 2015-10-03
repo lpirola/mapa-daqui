@@ -1,10 +1,11 @@
 @media screen and (max-width: 414px)
 	.button
 		padding: 0 1em
+		width: 100%
 	.row.destaque
-		padding: 4em 2em
+		padding: 4em 0
 		p
-			max-width: 75%
+			max-width: 80%
 	.row,
 	.row.como-funciona,
 	.row.adote-um-mapa,
@@ -14,15 +15,45 @@
 			margin: 0 2em
 		.column
 			col(1)
+		.button
+			margin: 1em 0
+	.row.audio-guia,
+	.row.adote-um-mapa
+		.column
+			.description
+				margin-top:10px
+				text-align:center
+			ul
+				li
+					float:none
+					text-align:center
+					width:100%
+					
+						img
+							margin:auto;
+	.row.destaque
+		p
+			max-width:100%
 	.row.formato
 		.item
 			col(1)
+			.button
+				margin-top:-10px
 	.row.conheca
 		.box-ajudar
 			col(1)
 	.row.formato
 		.item
 			padding-bottom: 3em
+	.row.como-funciona
+		.column
+			p.description
+				border-bottom: 1px solid #8F2F23
+				padding-bottom:30px
+	.row.audio-guia
+		img
+			max-width:100%
+			margin:auto			
 	.form-panel
 		col(1)
 		margin-top: 1.5em
@@ -30,7 +61,10 @@
 			display: none
 		&.small
 			col(8/10, 1/10)
-
+			.button
+				padding: 0
+	#map
+		margin: 0
 	.success-board
 		col(1)
 		margin-top: 0

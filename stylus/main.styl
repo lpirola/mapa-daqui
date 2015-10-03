@@ -1,7 +1,7 @@
 @import 'jeet'
 @import 'colors.import'
 @import 'fonts.import'
-
+@import 'animate.import'
 global-reset()
 //webfont('Open Sans', 'opensans-regular-webfont')
 //webfont('Montserrat', 'montserrat-regular-webfont', false, 'bold')
@@ -29,9 +29,13 @@ input
 	height: 3em
 	border: 0
 	padding: 0 1em
-	font-size: 1em
+	font-size: 1.4em
+	font-family: Montserrat
 	color: brownish-grey
-	border-bottom: .2em solid #e2e2e2
+	border-bottom: .3em solid #e3e3e3
+	outline: 0
+button
+	outline: 0
 
 @import 'buttons.import.styl'
 
@@ -41,17 +45,42 @@ input
 	text-align: center
 	background-color: watermelon
 	padding: 1em 0
+	height:60px;
+	a
+		img
+			margin-top:3px;
 .footer
 	col(1)
 	background-color: greyish-brown
 	padding: 3.5em 0
 	.logo
-		col(4/12)
+		span(6/24)
+		padding: .5em 0 0 0
+	.menu
+		span(8/24)
+		padding: .8em 0 0 0
+		a
+			color: #fff
+			margin: 0 1em 0 0
 	.perfis-sociais
-		col(4/12, 4/12)
-		text-align: right
+		span(3/24)
 		a
 			padding: 0 0 0 1em
+	.newsletter
+		span(7/24)
+		input, button
+			span(8/10)
+			height: 2.8em
+			font-family: Arial
+			font-size: .9em
+		button
+			span(2/10)
+			text-align: center
+			padding: 0
+			i
+				background-size: 100%
+				width: 1.5em
+				margin: .5em auto
 .icon-arrow-right
 	display: inline-block
 	background: top left url('/images/arrow-right.svg') no-repeat transparent
@@ -66,24 +95,34 @@ input
 	text-align: center
 	h2
 		font-size: 1.5em
-		margin: 1em 0
+		margin: 2em 0
 	.button.confirmar
 		col(1)
 		margin-bottom: 2em
 		font-weight: bold
+	.buscar
+		padding: 0
+		img
+			margin-top: 16px
 .form-panel
 	col(8/12, 2/12)
 	margin-bottom: 2em
 	input[type=text], input[type=email]
-		span(8/10)
+		span(9/10)
 		text-align: left
 		margin-bottom: 1.5em
 	.button
-		span(2/10)
+		span(1/10)
 		text-align:center
 		margin-bottom: 1.5em
 	&.small
 		col(6/12, 3/12)
+		input[type=text], input[type=email]
+			span(8/10)
+		.button
+			span(2/10)
+			i
+				margin: 13px 0 0 0
 		h3
 			font-weight: bold
 			font-size: 1.5em
@@ -93,12 +132,12 @@ input
 #map
 	height: 26em
 	border: .1em solid greyish
-	margin-top: 2em
+	margin-top: 11em
 	margin-bottom: 2em
 .success-board
 	margin-top: 5em
 	margin-bottom: 5em
-	padding: 1.5em
+	padding: 3em
 	background-color: white
 	col(8/12, 2/12)
 	a
@@ -106,11 +145,16 @@ input
 	.image-featured
 		col(1/3)
 	.text-featured
+		margin-top: 1em
 		col(2/3)
 		h2
 			font-weight: bold
 			font-size: 1.3em
 			margin-bottom: 1.5em
+	p
+		opacity:0.4
+		a
+			text-decoration:underline
 
 .row
 	col(1)
@@ -127,7 +171,7 @@ input
 		color: white
 		font-size: 1.7em
 		max-width: 35%
-		margin: 1em 0
+		margin: 3em 0
 
 .row.como-funciona
 	background-color: watermelon
@@ -147,8 +191,12 @@ input
 				vertical-align: middle
 		p
 			margin: 1.5em 0
+			font-size:1.3em
+			font-weight: bold
 			&.description
-				font-size: .8em
+				font-weight: normal
+				opacity:0.7
+				font-size: .9em
 
 .row.adote-um-mapa
 	background-color: light-grey-blue
@@ -158,6 +206,7 @@ input
 		.description
 			color: white
 			margin: 2em 0
+			font-size:1.4em
 		ul li
 			span(1/2)
 			margin: 1em 0
@@ -167,9 +216,11 @@ input
 				margin: 0 1em 0 0
 			p
 				margin: 0 .5em 0 0
-				width: 70%
-				font-size: .8em
+				width: 60%
 				vertical-align: top
+				color:#6a908b
+				font-size:0.9em
+			
 .row.audio-guia
 	background-color: light-sage
 	padding: 3em 0
@@ -178,6 +229,9 @@ input
 		.description
 			color: white
 			margin: 2em 0
+			font-size: 1.4em
+	img
+		margin:1em 0
 
 .row.conheca
 	background: 50% 50% url('/images/painel-poste.jpg') no-repeat transparent;
@@ -224,6 +278,15 @@ input
 		p
 			padding: 0 0 2.5em 0
 			opacity: .7
+.flash_message
+	col(1)
+	background-color: #dff0d8
+	color: #3c763d
+	border: 1px solid #d6e9c6
+	padding: 1em
+	text-align: center
+	
+.column.description
+	font-size:1.4em
 
-@import "ajustes-neumann.import"
 @import "mobile.import"
