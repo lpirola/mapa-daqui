@@ -24,7 +24,7 @@ Meteor.startup(function() {
 	Mapbox.load();
 });
 
-Template.home.helpers({
+Template.admin_lucas.helpers({
 	signs: function () {
 		return Signs.find({});
 	}
