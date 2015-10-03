@@ -136,20 +136,21 @@
 			<div class="item">
 				<img src="/images/formato-placa-rigida.jpg" alt=""/>
 				<h3>Placa rígida</h3>
-				<p>Material resistente à chuva, dobrável, e dá pra fazer na maioria das gráficas. Ideal para amarrar em postes de iluminação largos.</p>
+				<p>O mais parecido com uma placa de verdade, ideal para aplicar em postes finos e na fachada de um estabelecimento.  </p>
 				<img src="/images/em-breve@2x.png" alt="" width="224" />
 			</div>
 		</div>
 	</div>
 	<!--div class="row torne-parceiro"></div-->
+</template>
 
-	<!--ul>
+<template name="admin_lucas">
+	<ul>
 	{{#each signs}}
 	<li>{{address}} / {{lat}} / {{lng}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a></li>
 	{{/each}}
-	</ul-->
+	</ul>
 </template>
-
 <template name="header">
 	<div class="header">
 		<a href="/"><img class="logo" src="/images/logo-horizontal-fundo-escuro.svg" /></a>
@@ -162,9 +163,25 @@
 			<div class="logo">
 				<a href="/"><img src="/images/logo-horizontal.svg" /></a>
 			</div>
+			<div class="menu">
+				<a href="mailto:contatomapadaqui@gmail.com?subject=Contato MapaDaqui">fale conosco</a>
+				<a href="https://docs.google.com/forms/d/1q1A8Xk1NQ62J8Uilgr3Y5T_45NOJ_zwgl5ZolCcxufE/viewform" target="_blank">dê feedback</a>
+				<a href="https://github.com/lpirola/mapa-daqui" target="_blank">github</a>
+			</div>
 			<div class="perfis-sociais">
 				<a href="https://www.facebook.com/projetomapadaqui" target="_blank"><img src="/images/facebook@2x.png" width=36 height=36 alt=""/></a>
 				<a href="https://www.instagram.com/MapaDaqui" target="_blank"><img src="/images/instagram@2x.png" width=36 height=36 alt=""/></a>
+			</div>
+			<div class="newsletter">
+				<!-- Begin MailChimp Signup Form -->
+				<form action="//mapadaqui.us11.list-manage.com/subscribe/post?u=87839c543889173eed0b160bd&amp;id=e968255174" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Receba as novidades no seu email">
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_87839c543889173eed0b160bd_e968255174" tabindex="-1" value=""></div>
+					<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+						<i class="icon-arrow-right"></i>
+					</button>
+				</form>
+				<!--End mc_embed_signup-->
 			</div>
 		</div>
 	</div>
@@ -205,10 +222,21 @@
 		</div>
 		<form class="form-panel small">
 			<h3>Inscreva-se para receber novidades :)</h3>
-			<input id="email_subscribe" type="email" placeholder="Seu email" required>
-			<button type="submit" class="button salvar primary icon">
-				<img src="/images/arrow-right.svg" alt="" width=25 height=25 />
-			</button>
+			<!-- Begin MailChimp Signup Form -->
+				<form action="//mapadaqui.us11.list-manage.com/subscribe/post?u=87839c543889173eed0b160bd&amp;id=e968255174" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Seu email">
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_87839c543889173eed0b160bd_e968255174" tabindex="-1" value=""></div>
+					<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+						<i class="icon-arrow-right"></i>
+					</button>
+				</form>
+				<!--End mc_embed_signup-->
+		
+			{{#if flash_message}}
+				<p class="animated flash flash_message">
+					{{flash_message}}
+				</p>
+			{{/if}}
 		</form>
 	</div>
 </template>
