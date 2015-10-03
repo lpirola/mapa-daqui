@@ -47,21 +47,33 @@ input
 	background-color: greyish-brown
 	padding: 3.5em 0
 	.logo
-		col(3/12)
+		span(6/24)
 		padding: .5em 0 0 0
 	.menu
-		col(4/12)
+		span(8/24)
 		padding: .8em 0 0 0
 		a
 			color: #fff
 			margin: 0 1em 0 0
 	.perfis-sociais
-		col(2/12)
-		text-align: right
+		span(3/24)
 		a
 			padding: 0 0 0 1em
 	.newsletter
-		col(3/12)
+		span(7/24)
+		input, button
+			span(8/10)
+			height: 2.8em
+			font-family: Arial
+			font-size: .9em
+		button
+			span(2/10)
+			text-align: center
+			padding: 0
+			i
+				background-size: 100%
+				width: 1.5em
+				margin: .5em auto
 .icon-arrow-right
 	display: inline-block
 	background: top left url('/images/arrow-right.svg') no-repeat transparent
