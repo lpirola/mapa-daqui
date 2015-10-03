@@ -4,6 +4,8 @@ Session.setDefault('address', '');
 Session.setDefault('email', '');
 Session.setDefault('signId', 0);
 Session.setDefault('flash_message', '');
+Session.setDefault('nome_parceiro', '');
+Session.setDefault('mensagem_parceiro', '');
 var map;
 var geocodeAddress = function () {
 	var geocoder = new google.maps.Geocoder();
@@ -22,6 +24,21 @@ var geocodeAddress = function () {
 Meteor.startup(function() {
 	GoogleMaps.load();
 	Mapbox.load();
+});
+
+Template.home.events({
+	'submit form' : function () {
+		Meteor.call('sendEmail', Session.get('nome_parceiro'), Session.get('mensagem_parceiro'), function (error, result) {
+			console.log(error, result);
+		});
+		return false;
+	},
+	'change #nome_parceiro' : function(evt) {
+		Session.set('nome_parceiro', evt.currentTarget.value);
+	},
+	'change #mensagem_parceiro' : function(evt) {
+		Session.set('mensage_parceiro', evt.currentTarget.value);
+	},
 });
 
 Template.admin_lucas.helpers({

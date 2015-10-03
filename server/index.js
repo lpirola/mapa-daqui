@@ -42,6 +42,23 @@ Meteor.methods({
 			);
 		});
 		return waitConvert.result;
+	},
+	sendEmail: function (name, text) {
+		check([name, text], [String]);
+
+		// Let other method calls from the same client start running,
+		// without waiting for the email sending to complete.
+		this.unblock();
+		var to      = 'contatomapadaqui@gmail.com';
+		var from    = 'site@mapadaqui.org';
+		var subject = 'Cadastro de Parceiros - ' + name;
+
+		return Email.send({
+			to: to,
+			from: from,
+			subject: subject,
+			text: text
+		});
 	}
 });
 
