@@ -6,6 +6,7 @@ Session.setDefault('signId', 0);
 Session.setDefault('flash_message', '');
 Session.setDefault('nome_parceiro', '');
 Session.setDefault('mensagem_parceiro', '');
+Session.setDefault('instagram', []);
 var map;
 var geocodeAddress = function () {
 	var geocoder = new google.maps.Geocoder();
@@ -51,7 +52,15 @@ Template.home.events({
 Template.home.helpers({
 	flash_message: function() {
 		return Session.get('flash_message');
+	},
+	instagram: function() {
+		return Session.get('instagram');
 	}
+});
+Template.home.onCreated(function () {
+	Meteor.call('getInstagram', function (error, result) {
+		Session.set('instagram', result);
+	});
 });
 
 Template.admin_lucas.helpers({

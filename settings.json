@@ -1,5 +1,7 @@
 {
-  "public": {
-
-  }
+	"InstagramAPI": {
+		"CLIENT_ID":"72b5b2ec207e44eda80f7d74f0b4c32b",
+		"CLIENT_SECRET":"b3784132e33744589efb01fd3fc487b4"
+	},
+	"public": {}
 }

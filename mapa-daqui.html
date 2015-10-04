@@ -160,6 +160,14 @@
 			</div>
 		</div>
 	</div>
+	<div class="row instagram">
+		<h2>#Mapadaqui por aí</h2>
+		{{#each instagram}}
+			<a href="{{link}}" target="_blank" title="{{caption.text}} - Crédito: {{user.username}}">
+				<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" width=306  />
+			</a>
+		{{/each}}
+	</div>
 </template>
 
 <template name="admin_lucas">

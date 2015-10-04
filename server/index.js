@@ -59,6 +59,15 @@ Meteor.methods({
 			subject: subject,
 			text: text
 		});
+	},
+	getInstagram: function() {
+		var options = { tagName: 'mapadaqui' };
+		var waitConvert = Async.runSync(function(done) {
+			return InstagramFetcher.fetchImages.fromTag(options, function ( images, pagination ) {
+				done(null, images);
+			});
+		});
+		return waitConvert.result.slice(0,8);
 	}
 });
 
