@@ -12,7 +12,7 @@ var geocodeAddress = function () {
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({'address': Session.get('address')}, function(results, status) {
 		if (status === google.maps.GeocoderStatus.OK) {
-			var loc = [results[0].geometry.location.H, results[0].geometry.location.L]
+			var loc = [results[0].geometry.location.J, results[0].geometry.location.M]
 			//L.marker(loc).addTo(map);
 			map.setView(loc)
 		} else {
