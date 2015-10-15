@@ -144,6 +144,23 @@ html(lang="en")
 				top: 150px;
 				left: 300px;
 			}
+			.direitos-autorais {
+				position: absolute;
+				font-family: 'Montserrat', sans-serif;
+				top: 750px;
+				right: 0px;
+				width: 650px;
+				padding: 5px 15px;
+				color: #404040;
+				background-color: rgba(255, 255, 255, .5);
+			}
+			.lista-favoritos .direitos-autorais {
+				top: 440px;
+				width: 400px;
+				left: 0px;
+				right: auto;
+				font-size: 10px;
+			}
 			.coluna {
 				display: inline-block;
 				vertical-align: top;
@@ -232,11 +249,12 @@ html(lang="en")
 		.big-map
 			img(src='https://api.mapbox.com/v4/' + mapbox.map_name + '/' + lng + ',' + lat + ',17/1100x780.png32?access_token=' + mapbox.access_token, alt="mapa daqui", height=780, width=1100)
 			img.distancia(src='http://new.mapadaqui.org/images/target-5-minutos.png', width=501, height=501)
-
+			p.direitos-autorais © OpenStreetMap. Quer melhorar este mapa? Visite www.openstreetmap.com.br
 		.lista-favoritos
 			.mapa.coluna
 				img(src='https://api.mapbox.com/v4/' + mapbox.map_name + '/' + lng + ',' + lat + ',15/430x470.png32?access_token=' + mapbox.access_token, alt="mapa daqui", height=470, width=430)
 				img.distancia(src='http://new.mapadaqui.org/images/target-15-minutos.png', width=280, height=280)
+				p.direitos-autorais © OpenStreetMap. Quer melhorar este mapa? Visite www.openstreetmap.com.br
 			.lista.coluna
 				p.titulo LISTA DE LUGARES PRÓXIMOS DAQUI
 				ul
