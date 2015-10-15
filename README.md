@@ -15,9 +15,9 @@ O código disponibilizado tem dois principais objetivos:
 
 Lista de configurações necessárias para ajudar no desenvolvimento.
 
-* [Zepplin](zepplin.io_) - Design das páginas
-* [Meteor](meteor.com) - Framework de programação
-* [wkhtmltopdf](wkhtmltopdf.org) - Converter templates HTML em PDF
+* [Zepplin](http://zepplin.io) - Design das páginas
+* [Meteor](http://meteor.com) - Framework de programação
+* [wkhtmltopdf](http://wkhtmltopdf.org) - Converter templates HTML em PDF
 
 ## Ajude no desenvolvimento
 
