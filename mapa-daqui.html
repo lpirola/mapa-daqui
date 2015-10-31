@@ -31,7 +31,7 @@
 		<div class="container">
 			<h1><img src="/images/logotipo.svg" wih3h=134 height=115 alt="Mapa Daqui"/></h1>
 			<p>Sinalização pra deixar a cidade mais colaborativa, caminhável, saudável, segura, e interessante.</p>
-			<a href="/adotar-mapa" class="button primary">Adote um mapa <i class="icon-arrow-right"></i></a>
+			<a href="/escolha-formato" class="button primary">Adote um mapa <i class="icon-arrow-right"></i></a>
 		</div>
 	</div>
 	<div class="row como-funciona">
@@ -48,7 +48,7 @@
 				<p class="description">Pontos bacanas e importantes do bairro podem ser adiconados direto no mapa, com uma caneta.</p>
 			</div>
 			<div class="column online">
-				<div class="box-img"><img src="/images/em-breve@2x.png" alt="" wih3h="224" /></div>
+				<div class="box-img"><img src="/images/em-breve.png" alt="" wih3h="224" /></div>
 				<p>Versão online</p>
 				<p class="description">Explore o mapa dgital, adicione pontos, faça comentários, e conte histórias sobre locais específicos da cidade</p>
 			</div>
@@ -85,8 +85,11 @@
 				<h3>Adesivos <br>(mini placa)</h3>
 				<p>Super portátil e barato de fazer! Leve sempre com você e espalhe pela cidade!</p>
 				</a>
-			</div>		</div>
-	</div>		<div class="row conheca">
+			</div>		
+		</div>
+	</div>		
+
+	<div class="row conheca">
 		<div class="container">
 			<div class="box-ajudar">
 				<h2>O painel</h2>
@@ -112,15 +115,10 @@
 	<div class="row nossos-parceiros">
 		<div class="container">
 			<h2>Nossos Parceiros</h2>
-			<div class="parceiro" id="redbull"></div>
-			<div class="parceiro" id="ouvidor"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>
-			<div class="parceiro"></div>						
+			<a href="http://www.redbullbasement.com.br" class="parceiro" id="redbull"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="ouvidor"></a>
+			<a href="http://pretocafe.com.br/" class="parceiro" id="preto-cafe"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="garagem-hamburgueria"></a>					
 			</div>
 	</div>	
 	<div class="row audio-guia">
@@ -131,7 +129,7 @@
 			<div class="column content">
 				<a class="button" href="#">Mapa Online <i class="icon-arrow-right"></i></a>
 				<p class="description">Explore o mapa dgital, adicione pontos, faça comentários, e conte histórias sobre locais específicos da cidade</p>
-				<img src="/images/em-breve@2x.png" wih3h="224" alt=""/>
+				<img src="/images/em-breve.png" wih3h="224" alt=""/>
 			</div>
 		</div>
 	</div>
@@ -388,4 +386,40 @@
 			
 		</div>
 	</div>
+</template>
+<template name="escolha_formato">
+	<div class="row formato">
+		<div class="container">
+			<h2>Escolha um formato</h2>
+			<h3>Todos os downloads são gratuitos</h3>
+			<div class="item">
+				<a href="/adotar-mapa">
+				<img src="/images/formato-lambe-lambe.jpg" alt=""/>
+				<h3>Papel caseiro (Lambe-Lambe)</h3>
+				<p>Formatos compatíveis com qualquer impressora pra você colar por aí ou fazer lambe-lambe.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-banner">
+				<img src="/images/formato-lona.jpg" alt=""/>
+				<h3>Banner de lona flexível</h3>
+				<p>Ideal para amarrar em postes largos de iluminação, dá pra fazer na maioria das gráficas de bairro.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-pvc">
+					<img src="/images/formato-placa-rigida.jpg" alt=""/>
+					<h3>Placa rígida <br>de PVC</h3>
+					<p>Para prender em postes finos de metal, ou afixar em uma parede do seu estabelecimento.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-adesivo">
+				<img src="/images/adesivo.png" alt=""/>
+				<h3>Adesivos <br>(mini placa)</h3>
+				<p>Super portátil e barato de fazer! Leve sempre com você e espalhe pela cidade!</p>
+				</a>
+			</div>		
+		</div>
+	</div>	
 </template>
