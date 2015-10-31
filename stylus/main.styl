@@ -181,6 +181,9 @@ button
 		margin:0
 	p
 		col(8/12, 2/12)
+		opacity:.5
+		margin-top:2em 
+		line-height:1.4em
 		
 .success-board
 	margin-top: 5em
@@ -339,7 +342,7 @@ button
 		padding: 0 0 2.5em 0		
 		opacity	.5
 	.item
-		col(1/4, gutter:3)
+		col(1/4, gutter:0.5)
 		height: 330px;
 		background-color white
 		h3
@@ -385,9 +388,9 @@ button
 			height: 10em
 		
 .nossos-parceiros
-	padding-bottom:5em 
+	padding-bottom:5em
+	col(12/12) 
 	.container
-		col(8/12, 2/12)
 		h2
 			text-align center
 			padding-bottom 1em
@@ -420,6 +423,11 @@ button
 		#garagem-hamburgueria
 			background:white url("/images/parceiros-garagem.jpg") 50% 50% no-repeat;
 			background-size:80%;
+	.button
+		display:block;
+		width:35%;
+		min-width:300px;
+		margin:30px auto 0px auto;
 
 .pergunta
 
@@ -435,12 +443,14 @@ button
 	p  
 		opacity:.5
 		line-height 1.4em
+		margin-bottom: 1em
 	a
-		color:@watermelon
+		color: watermelon
 		
 	
 		
 .row.instagram
+	col(12/12)
 	background-color: rgb(70, 67, 64)
 	text-align: center
 	h2

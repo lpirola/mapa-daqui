@@ -67,7 +67,7 @@ Meteor.methods({
 				done(null, images);
 			});
 		});
-		return waitConvert.result.slice(0,8);
+		return waitConvert.result.slice(0,6);
 	}
 });
 
