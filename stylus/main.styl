@@ -156,6 +156,32 @@ button
 	border: .1em solid greyish
 	margin-top: 11em
 	margin-bottom: 2em
+.em-breve-board
+	col(8/12, 2/12)
+	text-align center	
+	background:white;
+	margin-top:5em;
+	margin-bottom:5em;
+	padding: 2em;
+	.button
+		margin-top:2em
+	.adesivo-circle
+		col(6/12)
+		background white url("/images/adesivo-circle.png") 50% 50%
+		background-size:cover;
+		display:block
+		float:none;
+		margin-top 2em
+		margin-bottom 2em
+		height:250px;
+		width:250px
+		margin-left: auto
+		margin-right auto
+	h2
+		margin:0
+	p
+		col(8/12, 2/12)
+		
 .success-board
 	margin-top: 5em
 	margin-bottom: 1em
@@ -169,16 +195,19 @@ button
 	.text-featured
 		margin-top: 1em
 		col(2/3)
-		h2
+		h2w
 			font-weight: bold
 			font-size: 1.3em
 			margin-bottom: 1.5em
+	h2
+		font-size 1.5em;
 	p
 		opacity:0.4
 		a
 			text-decoration:underline
 .success-board.instructions
 	margin-top: 0
+	margin-bottom: 2em
 	padding 0
 	.text-featured
 		width:100%
@@ -216,6 +245,7 @@ button
 		margin: 3em 0
 
 .row.como-funciona
+	padding 6em 0
 	background-color: watermelon
 	text-align: center
 	color: #fff
@@ -297,23 +327,41 @@ button
 					font-weight: bold
 					opacity: 1
 
+
 .row.formato
-	background-color: white
+	padding 6em 0
+	background-color: #EFEAE4
 	text-align: center
 	h2
-		padding: 0 0 2.5em 0
+		padding: 0 0 0.6em 0
+	h3
+		padding: 0 0 2.5em 0		
+		opacity	.5
 	.item
-		col(1/3)
+		col(1/4, gutter:3)
+		height: 330px;
+		background-color white
 		h3
-			font-size: 1.5em
-			padding: 1em 0
+			font-size: 1.2em
+			padding: 1em
 			font-weight: bold
+			opacity:1;
 		img
 			max-width: 100%
 		p
-			padding: 0 0 2.5em 0
+			padding: 0em 1em 1em 1em 
 			opacity: .7
-
+		&:hover
+			text-decoration:none
+			box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
+			-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+			box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+		a
+			&:hover
+				text-decoration none
+			
+		
 .row.torne-parceiro
 	background-color: pinkish-grey
 	.column
@@ -334,6 +382,39 @@ button
 			text-align: center
 		textarea
 			height: 10em
+.row.nossos-parceiros
+	background-color #EFEAE4
+	margin auto
+	.gallery
+		col(12/12)
+	h2
+		text-align center
+		padding-bottom 1em
+	.parceiro 
+		col(1/4, gutter: 1, cycle: 5)
+		margin-bottom:@margin-right;
+		height:220px;
+		background:white
+		text-align:center
+		
+		&:hover
+			text-decoration:none
+			box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
+			-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+			box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+	#redbull
+		background:white url("/images/parceiros-redbull.png") 50% 50% no-repeat;
+		background-size:50%;
+	#preto-cafe
+		background:white url("/images/parceiros-pretocafe.png") 50% 50% no-repeat;
+		background-size:50%;
+	#ouvidor
+		background:white url("/images/parceiros-ouvidor.png") 50% 50% no-repeat;
+		background-size:50%;
+		
+	
+		
 .row.instagram
 	background-color: rgb(70, 67, 64)
 	text-align: center
