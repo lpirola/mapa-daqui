@@ -383,36 +383,56 @@ button
 			text-align: center
 		textarea
 			height: 10em
-.row.nossos-parceiros
-	background-color #EFEAE4
-	margin auto
-	.gallery
-		col(12/12)
-	h2
-		text-align center
-		padding-bottom 1em
-	.parceiro 
-		col(1/4, gutter: 1, cycle: 5)
-		margin-bottom:@margin-right;
-		height:220px;
-		background:white
-		text-align:center
 		
-		&:hover
-			text-decoration:none
-			box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
-			-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-			-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-			box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-	#redbull
-		background:white url("/images/parceiros-redbull.png") 50% 50% no-repeat;
-		background-size:50%;
-	#preto-cafe
-		background:white url("/images/parceiros-pretocafe.png") 50% 50% no-repeat;
-		background-size:50%;
-	#ouvidor
-		background:white url("/images/parceiros-ouvidor.png") 50% 50% no-repeat;
-		background-size:50%;
+.nossos-parceiros
+	.container
+		col(8/12, 2/12)
+		h2
+			text-align center
+			padding-bottom 1em
+			
+		.parceiro 
+			display: inline;
+			height:220px;
+			background:white
+			text-align:center
+			col(6/24, gutter:0)
+			border: 2px solid #EFEAE4;
+			
+			box-sizing: border-box;
+			
+			&:hover
+				text-decoration:none
+				box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
+				-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+				-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+				box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
+		#redbull
+			background:white url("/images/parceiros-redbull.png") 50% 50% no-repeat;
+			background-size:80%;
+		#preto-cafe
+			background:white url("/images/parceiros-pretocafe.png") 50% 50% no-repeat;
+			background-size:80%;
+		#ouvidor
+			background:white url("/images/parceiros-ouvidor.png") 50% 50% no-repeat;
+			background-size:80%;
+
+.pergunta
+
+	margin-bottom: 1em
+	padding: 3em
+	background-color: white
+	col(8/12, 2/12)
+	text-align: left
+	h3 
+		font-weight bold
+		font-size 1.2em
+		margin-bottom 1em
+	p  
+		opacity:.5
+		line-height 1.4em
+	a
+		color:@watermelon
 		
 	
 		
