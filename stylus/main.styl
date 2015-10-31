@@ -45,29 +45,50 @@ button
 	text-align: center
 	background-color: watermelon
 	padding: 1em 0
-	height:60px;
+	height:60px
 	a
 		img
-			margin-top:3px;
+			margin-top:3px
 .footer
 	col(1)
 	background-color: greyish-brown
 	padding: 3.5em 0
+	
+	.fb-page	
+		span
+			margin-top:30px		
+	
 	.logo
 		span(6/24)
-		padding: .5em 0 0 0
-	.menu
-		span(8/24)
-		padding: .8em 0 0 0
+		padding: .0 0 0 0
+		p
+			margin-top 1em
+			padding-right 3em
+	
+	.sobre, .apoie 
+		span(6/24)
+		padding: .0 0 0 0
 		a
-			color: #fff
+			display:block
+			color: #757371
 			margin: 0 1em 0 0
+			line-height:2em
+			
+			em
+				color: #ED4D51
+				
+	.menu-title
+		font-weight bold
+		color white
+		margin-bottom:1.5em
+		
 	.perfis-sociais
-		span(3/24)
+		
+		form
+			margin-top:3em
+		span(6/24)
 		a
 			padding: 0 0 0 1em
-	.newsletter
-		span(7/24)
 		input, button
 			span(8/10)
 			height: 2.8em
@@ -81,6 +102,7 @@ button
 				background-size: 100%
 				width: 1.5em
 				margin: .5em auto
+				
 .icon-arrow-right
 	display: inline-block
 	background: top left url('/images/arrow-right.svg') no-repeat transparent
@@ -136,7 +158,7 @@ button
 	margin-bottom: 2em
 .success-board
 	margin-top: 5em
-	margin-bottom: 5em
+	margin-bottom: 1em
 	padding: 3em
 	background-color: white
 	col(8/12, 2/12)
@@ -155,7 +177,26 @@ button
 		opacity:0.4
 		a
 			text-decoration:underline
-
+.success-board.instructions
+	margin-top: 0
+	padding 0
+	.text-featured
+		width:100%
+		margin:0px
+	h2
+		background-color:#9AD2CB
+		margin:0px
+		padding:1em
+		width:100%
+		color:white
+		text-align:center
+		margin-bottom:1em
+	ol
+		padding:1em 3em 3em 5em
+		list-style-type: decimal
+		li
+			margin-bottom:2em
+	
 .row
 	col(1)
 	min-height: 10em

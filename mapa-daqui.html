@@ -54,6 +54,28 @@
 			</div>
 		</div>
 	</div>
+	<div class="row conheca">
+		<div class="container">
+			<div class="box-ajudar">
+				<h2>O painel</h2>
+				<div class="item">
+					<img src="/images/pra-onde-fica.svg" alt=""/>
+					<p class="title">Pra onde fica?</p>
+					<p>Setas direcionais para apontar os caminhos até o metrô e outros lugares importantes</p>
+				</div>
+				<div class="item">
+					<img src="/images/dois-mapas.svg" alt=""/>
+					<p class="title">Dois mapas</p>
+					<p>O mapa principal mostra tudo que está ao seu redor, em uma caminhada de 5 minutos. O segundo é mais amplo, pra encontrar lugares mais distantes.</p>
+				</div>
+				<div class="item">
+					<img src="/images/pode-rabiscar.svg" alt=""/>
+					<p class="title">Lista de lugares locais</p>
+					<p>Espaço em branco para as pessoas listarem os pontos mais importantes da região</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="row adote-um-mapa">
 		<div class="container">
 			<div class="column featured">
@@ -95,28 +117,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row conheca">
-		<div class="container">
-			<div class="box-ajudar">
-				<h2>conheça o mapa</h2>
-				<div class="item">
-					<img src="/images/pra-onde-fica.svg" alt=""/>
-					<p class="title">Pra onde fica?</p>
-					<p>Setas direcionais para apontar os caminhos até o metrô e outros lugares importantes</p>
-				</div>
-				<div class="item">
-					<img src="/images/dois-mapas.svg" alt=""/>
-					<p class="title">Dois mapas</p>
-					<p>O mapa principal mostra tudo que está ao seu redor, em uma caminhada de 5 minutos. O segundo é mais amplo, pra encontrar lugares mais distantes.</p>
-				</div>
-				<div class="item">
-					<img src="/images/pode-rabiscar.svg" alt=""/>
-					<p class="title">Lista de lugares locais</p>
-					<p>Espaço em branco para as pessoas listarem os pontos mais importantes da região</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<div class="row formato">
 		<div class="container">
@@ -185,30 +186,46 @@
 
 <template name="footer">
 	<div class="footer">
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=430235993828355";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 		<div class="container">
 			<div class="logo">
-				<a href="/"><img src="/images/logo-horizontal.svg" /></a>
+				<a href="/"><img src="/images/logo-org.svg" /></a>
+				
 			</div>
-			<div class="menu">
-				<a href="mailto:contatomapadaqui@gmail.com?subject=Contato MapaDaqui">fale conosco</a>
-				<a href="https://docs.google.com/forms/d/1q1A8Xk1NQ62J8Uilgr3Y5T_45NOJ_zwgl5ZolCcxufE/viewform" target="_blank">dê feedback</a>
-				<a href="https://github.com/lpirola/mapa-daqui" target="_blank">github</a>
+			<div class="sobre">
+				<p class="menu-title">Sobre</p>
+				<a href="mailto:contatomapadaqui@gmail.com?subject=Contato MapaDaqui">Contato</a>
+				<a href="/em-breve">Perguntas Frequentes</a>
+			</div>
+			<div class="apoie">
+				<p class="menu-title">Apoie</p>
+				<a href="/em-breve">Doe um cafezinho<em>  ♥</em></a>
+				<a href="https://docs.google.com/forms/d/1q1A8Xk1NQ62J8Uilgr3Y5T_45NOJ_zwgl5ZolCcxufE/viewform" target="_blank">Dê feedback</a>
+				<a href="https://github.com/lpirola/mapa-daqui" target="_blank">Contribua no Github</a>
 			</div>
 			<div class="perfis-sociais">
-				<a href="https://www.facebook.com/projetomapadaqui" target="_blank"><img src="/images/facebook@2x.png" width=36 height=36 alt=""/></a>
-				<a href="https://www.instagram.com/MapaDaqui" target="_blank"><img src="/images/instagram@2x.png" width=36 height=36 alt=""/></a>
-			</div>
-			<div class="newsletter">
+				<p class="menu-title">Acompanhe</p>
 				<!-- Begin MailChimp Signup Form -->
 				<form action="//mapadaqui.us11.list-manage.com/subscribe/post?u=87839c543889173eed0b160bd&amp;id=e968255174" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Receba as novidades no seu email">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Digite seu email">
 					<div style="position: absolute; left: -5000px;"><input type="text" name="b_87839c543889173eed0b160bd_e968255174" tabindex="-1" value=""></div>
 					<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
 						<i class="icon-arrow-right"></i>
 					</button>
 				</form>
 				<!--End mc_embed_signup-->
+				<!--Start Facebook Page plugin-->
+				<div class="fb-page" data-href="https://www.facebook.com/projetomapadaqui" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/projetomapadaqui"><a href="https://www.facebook.com/projetomapadaqui">Mapa Daqui</a></blockquote></div></div>
+				<!--End Facebook Page plugin-->
 			</div>
+
 		</div>
 	</div>
 	<script>
@@ -246,6 +263,24 @@
 			<p>Seu download deve começar em alguns segundos. Caso seu download não inicie automaticamente, <a href="?tentativa=2">clique aqui</a> para tentar novamente.</p>
 			</div>
 		</div>
+		<div class="success-board instructions">
+			<div class="text-featured">
+			<h2>Guia para instalar seus lambe-lambes</h2>
+			<div class="lista">
+				<ol>
+					<li>Imprima o seu lambe-lambe colorido ou preto e branco (impressoras à 	laser ou xerox preto e branco costumam ser mais resistentes à chuva). 	Faça várias cópiar para espalhar em postes diferentes</li>
+					<li>Para colar, utilize um pincel bem grosso, ou um rolinho de pintar, e 	uma mistura de cola branca com água ( na proporção 1 parte de cola 	para 2 partes de água).</li>
+					<li>Escolha um local com bastante fluxo e permanância de pedestres, 	como em frente a restaurantes, bares, esquinas movimentadas, ou 	pontos de ônibus.</li>
+					<li>Passe bastante cola no poste antes de colar o papel com um pincel 	largo ou um rolinho de tinta</li>
+					<li>Cole as folhas no poste</li>
+					<li>Passe bastante cola por cima de tudo, deixando bem molhado</li>
+					<li>Espere secar e volte para preencher algumas informações no painel!</li>
+					<li>Tire uma foto e compartilhe no insta com a hashtag #mapadaqui</li>
+					
+				</ol>	
+			</div>	
+			</div>
+		</div>
 		<form class="form-panel small">
 			<h3>Inscreva-se para receber novidades :)</h3>
 			<!-- Begin MailChimp Signup Form -->
@@ -258,5 +293,29 @@
 				</form>
 				<!--End mc_embed_signup-->
 		</form>
+	</div>
+</template>
+
+<template name="adotar_mapa">
+	<div class="container box-adote-um-mapa">
+		<div class="form-panel">
+			<h2>Onde vai ficar seu mapa?</h2>
+			<input id="address" type="text" placeholder="Busque um endereço">
+			<a class="button buscar verde icon" href="/buscar">
+				<img src="/images/search@2x.png" alt="" width=25 height=25 />
+			</a>
+			<div id="map"></div>
+			<a class="button verde confirmar" href="/confirmar">Confirmar</a>
+		</div>
+	</div>
+</template>
+
+<template name="em_breve">
+	<div class="container box-adote-um-mapa">
+		<div class="success-board">
+			<div class="text-featured">
+			<h2>Em breve!<br>Estamos trabalhando nessa página</h2>
+			</div>
+		</div>
 	</div>
 </template>
