@@ -17,6 +17,9 @@ Meteor.methods({
 		var now = new Date();
 		return Signs.insert({address: address, lat:lat, lng:lng, email:'', created_at: now});
 	},
+	'removeSign': function(signId) {
+		return Signs.remove(signId);
+	},
 	'updateEmail': function(signId, email) {
 		return Signs.update(signId, {$set: {email:email}});
 	},

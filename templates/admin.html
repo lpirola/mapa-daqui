@@ -1,7 +1,15 @@
-<template name="admin_lucas">
+<template name="lista_sinalizacoes">
 	<ul>
 	{{#each signs}}
-	<li>{{apress}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a></li>
+	<li>{{apress}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li>
 	{{/each}}
 	</ul>
+</template>
+
+<template name="remover_sinalizacao">
+	<form name="remover_sinalizacao">
+		<p>Você tem certeza que deseja excluir essa sinalização ?</p>
+		<label><input type="radio" value="não" name="confirmacao" class="secondary"> Não</label>
+		<label><input type="radio" value="sim" name="confirmacao" class="primary"> Sim</label>
+	</form>
 </template>
