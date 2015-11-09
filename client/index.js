@@ -8,8 +8,8 @@ Session.setDefault('nome_parceiro', '');
 Session.setDefault('mensagem_parceiro', '');
 Session.setDefault('instagram', []);
 
-var Signs = new Mongo.Collection("signs"),
-	map;
+Signs = new Mongo.Collection("signs");
+var map;
 
 Meteor.startup(function() {
 	GoogleMaps.load();
