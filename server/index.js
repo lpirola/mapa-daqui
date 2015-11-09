@@ -21,13 +21,15 @@ Meteor.methods({
 	},
 	'generatePdf': function (signId) {
 		var currentSign = Signs.findOne({_id:signId});
+		var sequenceNumber = Signs.find({_id: { $gt : signId}}).count();
 		var locals = {
 			mapbox: {
 					access_token: 'pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ',
 					map_name: 'mapadaqui.2586fca1'
 			},
 			lat : currentSign.lat,
-			lng : currentSign.lng
+			lng : currentSign.lng,
+			sequence : sequenceNumber
 		};
 		var htmlOutput = jade.render(Assets.getText('jade/lambe-lambe.jade'), locals);
 		var waitConvert = Async.runSync(function(done) {
