@@ -1,4 +1,5 @@
 <template name="lista_sinalizacoes">
+	<a href="/admin/gerar-em-lote">gerar em lote</a>
 	<ul>
 	{{#each signs}}
 	<li>{{apress}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li>
@@ -11,5 +12,15 @@
 		<p>Você tem certeza que deseja excluir essa sinalização ?</p>
 		<label><input type="radio" value="não" name="confirmacao" class="secondary"> Não</label>
 		<label><input type="radio" value="sim" name="confirmacao" class="primary"> Sim</label>
+	</form>
+</template>
+
+<template name="gerar_em_lote">
+	<p>Gerar em lote</p>
+	<form name="gerar-em-lote">
+		<label for="arquivo_csv">arquivo-csv</label><input type="file" name="arquivo_csv" id="arquivo_csv" accept="text/csv">
+
+
+		<p><input type="submit" value="Carregar endereços"></p>
 	</form>
 </template>

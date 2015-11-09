@@ -22,3 +22,20 @@ Template.remover_sinalizacao.events({
 		return false;
 	}
 });
+
+Template.gerar_em_lote.events({
+	'submit form': function(evt) {
+		var file = evt.target.arquivo_csv.files[0];
+		var reader  = new FileReader();
+
+		reader.onloadend = function () {
+			console.log(reader.result);
+		};
+
+		if (file) {
+			reader.readAsText(file);
+		}
+
+		return false;
+	}
+});
