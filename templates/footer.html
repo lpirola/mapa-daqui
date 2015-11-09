@@ -1,0 +1,56 @@
+<template name="footer">
+	<div class="footer">
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=430235993828355";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="container">
+			<div class="logo">
+				<a href="/"><img src="/images/logo-org.svg" /></a>
+
+			</div>
+			<div class="sobre">
+				<p class="menu-title">Sobre</p>
+				<a href="mailto:contatomapadaqui@gmail.com?subject=Contato MapaDaqui">Contato</a>
+				<a href="/perguntas-frequentes">Perguntas Frequentes</a>
+			</div>
+			<div class="apoie">
+				<p class="menu-title">Apoie</p>
+				<a href="/cafezinho">Doe um cafezinho<em>  ♥</em></a>
+				<a href="https://docs.google.com/forms/d/1q1A8Xk1NQ62J8Uilgr3Y5T_45NOJ_zwgl5ZolCcxufE/viewform" target="_blank">Dê feedback</a>
+				<a href="https://github.com/lpirola/mapa-daqui" target="_blank">Contribua no Github</a>
+				<!--<a href="/torne-parceiro" target="_blank">Torne-se um parceiro</a>-->
+			</div>
+			<div class="perfis-sociais">
+				<p class="menu-title">Acompanhe</p>
+				<!-- Begin MailChimp Signup Form -->
+				<form action="//mapadaqui.us11.list-manage.com/subscribe/post?u=87839c543889173eed0b160bd&amp;id=e968255174" method="post" id="mc-embeped-subscribe-form" name="mc-embeped-subscribe-form" class="validate" target="_blank" novalidate>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Digite seu email">
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_87839c543889173eed0b160bd_e968255174" tabindex="-1" value=""></div>
+					<button type="submit" value="Subscribe" name="subscribe" id="mc-embeped-subscribe" class="button primary">
+						<i class="icon-arrow-right"></i>
+					</button>
+				</form>
+				<!--End mc_embed_signup-->
+				<!--Start Facebook Page plugin-->
+				<div class="fb-page" data-href="https://www.facebook.com/projetomapadaqui" data-small-header="true" data-adapt-container-wih3h="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/projetomapadaqui"><a href="https://www.facebook.com/projetomapadaqui">Mapa Daqui</a></blockquote></div></div>
+				<!--End Facebook Page plugin-->
+			</div>
+
+		</div>
+	</div>
+	<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65370920-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</template>

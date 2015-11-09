@@ -1,0 +1,31 @@
+<template name="torne_parceiro">
+	<div class="row torne-parceiro">
+		<div class="container">
+			<div class="column featured">
+				<img src="/images/foto-ellipse-03.svg" alt=""/>
+			</div>
+			<div class="column content">
+				<h2>Torne-se um parceiro</h2>
+				<p>Se você tem um estabelecimento comercial, e gostaria de adotar um mapa, entre em contato! <br> <br>
+					Você cobre o custo de produção de um ou mais paineis para seu bairro, nos paga um cafezinho (uma doação opcional de quanto você quiser, pra manter o projeto vivo), e nós colocamos sua marca no mural abaixo. </p>
+				<form name="parceiro">
+					{{#if flash_message}}
+						<p class="animated flash flash_message">{{flash_message}}</p>
+					{{/if}}
+					<input required type="text" value="" id="nome_parceiro" placeholder="Seu nome" />
+					<textarea required id="mensagem_parceiro" rows="8" cols="40" placeholder="Mensagem"></textarea>
+					<button type="submit" value="Enviar" class="button primary">Enviar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="row nossos-parceiros">
+		<div class="container">
+			<h2>Nossos Parceiros</h2>
+			<a href="http://www.redbullbasement.com.br" class="parceiro" id="redbull"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="ouvidor"></a>
+			<a href="http://pretocafe.com.br/" class="parceiro" id="preto-cafe"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="garagem-hamburgueria"></a>
+			</div>
+	</div>
+</template>

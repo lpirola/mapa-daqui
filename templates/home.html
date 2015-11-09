@@ -1,0 +1,111 @@
+<template name="home">
+	<div class="row destaque">
+		<div class="container">
+			<h1><img src="/images/logotipo.svg" wih3h=134 height=115 alt="Mapa Daqui"/></h1>
+			<p>Sinalização gratuita pra deixar a cidade mais colaborativa, caminhável, saudável, segura, e interessante.</p>
+			<a href="/escolha-formato" class="button primary">Adote um mapa <i class="icon-arrow-right"></i></a>
+		</div>
+	</div>
+	<div class="row como-funciona">
+		<div class="container">
+			<h2>Como Funciona?</h2>
+			<div class="column instalar">
+				<div class="box-img"><img src="/images/desenho-01.svg" alt=""/></div>
+				<p>Qualquer um pode instalar</p>
+				<p class="description">Baixe de graça o arquivo para imprimir em casa, levar na gráfica, ou encomende de nós um kit completo.</p>
+			</div>
+			<div class="column rabiscar">
+				<div class="box-img"><img src="/images/desenho-02.svg" alt=""/></div>
+				<p>Rabisco é liberado!</p>
+				<p class="description">Pontos bacanas e importantes do bairro podem ser adiconados direto no mapa, com uma caneta.</p>
+			</div>
+			<div class="column online">
+				<div class="box-img"><img src="/images/em-breve.png" alt="" wih3h="224" /></div>
+				<p>Versão online</p>
+				<p class="description">Explore o mapa dgital, adicione pontos, faça comentários, e conte histórias sobre locais específicos da cidade</p>
+			</div>
+		</div>
+	</div>
+	<div class="row formato">
+		<div class="container">
+			<h2>Escolha um formato</h2>
+			<h3>Todos os downloads são gratuitos</h3>
+			<div class="item">
+				<a href="/adotar-mapa">
+				<img src="/images/formato-lambe-lambe.jpg" alt=""/>
+				<h3>Papel caseiro <br>(Lambe-Lambe)</h3>
+				<p>Formatos compatíveis com qualquer impressora pra você colar por aí ou fazer lambe-lambe.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-banner">
+				<img src="/images/formato-lona.jpg" alt=""/>
+				<h3>Banner <br>de lona flexível</h3>
+				<p>Ideal para amarrar em postes largos de iluminação, dá pra fazer na maioria das gráficas de bairro.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-pvc">
+					<img src="/images/formato-placa-rigida.jpg" alt=""/>
+					<h3>Placa rígida <br>de PVC</h3>
+					<p>Para prender em postes finos de metal, ou afixar em uma parede do seu estabelecimento.</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="/adotar-adesivo">
+				<img src="/images/adesivo.png" alt=""/>
+				<h3>Adesivos <br>(mini placa)</h3>
+				<p>Super portátil e barato de fazer! Leve sempre com você e espalhe pela cidade!</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row conheca">
+		<div class="container">
+			<div class="box-ajudar">
+				<h2>O painel</h2>
+				<div class="item">
+					<img src="/images/pra-onde-fica.svg" alt=""/>
+					<p class="title">Pra onde fica?</p>
+					<p>Setas direcionais para apontar os caminhos até o metrô e outros lugares importantes</p>
+				</div>
+				<div class="item">
+					<img src="/images/dois-mapas.svg" alt=""/>
+					<p class="title">Dois mapas</p>
+					<p>O mapa principal mostra tudo que está ao seu redor, em uma caminhada de 5 minutos. O segundo é mais amplo, pra encontrar lugares mais distantes.</p>
+				</div>
+				<div class="item">
+					<img src="/images/pode-rabiscar.svg" alt=""/>
+					<p class="title">Lista de lugares locais</p>
+					<p>Espaço em branco para as pessoas listarem os pontos mais importantes da região</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--
+	<div class="row nossos-parceiros">
+		<div class="container">
+			<h2>Nossos Parceiros</h2>
+			<a href="http://www.redbullbasement.com.br" class="parceiro" id="redbull"></a>
+			<a href="http://shoottheshit.cc" class="parceiro" id="shoot"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="ouvidor"></a>
+			<a href="http://pretocafe.com.br/" class="parceiro" id="preto-cafe"></a>
+			<a href="https://www.facebook.com/ocupaouvidor63revitalizacao/" class="parceiro" id="garagem-hamburgueria"></a>
+		</div>
+		<div class="container">
+		<a href="/torne-parceiro" class="button">Torne-se um parceiro<i class="icon-arrow-right"></i></a>
+		</div>
+	</div>
+	-->
+
+	<div class="row instagram">
+		<h2>#Mapadaqui por aí</h2>
+		{{#each instagram}}
+			<a href="{{link}}" target="_blank" title="{{caption.text}} - Crédito: {{user.username}}">
+				<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" wih3h=306  />
+			</a>
+		{{/each}}
+	</div>
+</template>
