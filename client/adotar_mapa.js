@@ -1,3 +1,16 @@
+var geocodeAddress = function () {
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({'address': Session.get('address')}, function(results, status) {
+		if (status === google.maps.GeocoderStatus.OK) {
+			var loc = [results[0].geometry.location.lat(), results[0].geometry.location.lng()]
+			//L.marker(loc).addTo(map);
+			map.setView(loc)
+		} else {
+			console.log('Geocode was not successful for the following reason: ' + status);
+		}
+	});
+	return false;
+};
 Template.adotar_mapa.rendered = function () {
 	Deps.autorun(function () {
 		if (Mapbox.loaded()) {

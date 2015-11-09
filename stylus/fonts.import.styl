@@ -16,3 +16,17 @@ webfont(family, file, hack-chrome-windows = false, weight = 'normal')
       @font-face
         font-family family
         src url(font-url(file + '.svg#'+ family)) format('svg')
+
+//define default values (best to put this in the default.styl file)
+base-font-size = 14
+base-line-height = 24
+
+//This is the useful part: it compares the given value to the base values and calculates the correct output
+fontSsize($fontValue = base-font-size, $baseFontValue = base-font-size, $baseLineValue = base-line-height)
+	font-size   $fontValue px
+	font-size   ($fontValue / $baseFontValue) rem
+	line-height ($fontValue / $baseFontValue) * $baseLineValue
+	line-height ($baseLineValue/$baseFontValue) * ($fontValue / $baseFontValue) rem
+
+//webfont('Open Sans', 'opensans-regular-webfont')
+//webfont('Montserrat', 'montserrat-regular-webfont', false, 'bold')

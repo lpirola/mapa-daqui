@@ -1,46 +1,19 @@
 @import 'jeet'
-@import 'colors.import'
+@import 'variables.import'
 @import 'fonts.import'
 @import 'animate.import'
-global-reset()
-//webfont('Open Sans', 'opensans-regular-webfont')
-//webfont('Montserrat', 'montserrat-regular-webfont', false, 'bold')
+@import "generic.import"
+@import 'components/buttons.import.styl'
+@import "components/form-panel.import"
+@import "components/rodape.import"
+@import "components/adote-um-mapa.import"
+@import "components/imprimir-pdf.import"
+@import "components/destaque.import"
+@import "components/como-funciona.import"
+@import "components/parceiros.import"
+@import "components/escolha-formato.import"
+@import "components/conheca.import"
 
-html
-	box-sizing: border-box
-*, *:before, *:after
-	box-sizing: inherit
-body
-	background-color: light-grey
-	//font-family: 'Open Sans', sans-serif;
-	font-family: 'Montserrat', sans-serif;
-	color: brownish-grey
-	font-size: 14px
-	line-height: 1.2
-a
-	text-decoration: none
-	color: brownish-grey
-	&:hover
-		text-decoration: underline
-h2
-	font-weight: bold
-	font-size: 2em
-input, textarea
-	height: 3em
-	border: 0
-	padding: 0 1em
-	font-size: 1.4em
-	font-family: Montserrat
-	color: brownish-grey
-	border-bottom: .3em solid #e3e3e3
-	outline: 0
-button
-	outline: 0
-
-@import 'buttons.import.styl'
-
-.container
-	center(960px)
 .header
 	text-align: center
 	background-color: watermelon
@@ -49,265 +22,6 @@ button
 	a
 		img
 			margin-top:3px
-.footer
-	col(1)
-	background-color: greyish-brown
-	padding: 3.5em 0
-	
-	.fb-page	
-		span
-			margin-top:30px		
-	
-	.logo
-		span(6/24)
-		padding: .0 0 0 0
-		p
-			margin-top 1em
-			padding-right 3em
-	
-	.sobre, .apoie 
-		span(6/24)
-		padding: .0 0 0 0
-		a
-			display:block
-			color: #757371
-			margin: 0 1em 0 0
-			line-height:2em
-			
-			em
-				color: #ED4D51
-				
-	.menu-title
-		font-weight bold
-		color white
-		margin-bottom:1.5em
-		
-	.perfis-sociais
-		
-		form
-			margin-top:2em
-		span(6/24)
-		a
-			padding: 0 0 0 1em
-		input, button
-			span(8/10)
-			height: 2.8em
-			font-family: Arial
-			font-size: .9em
-		button
-			span(2/10)
-			text-align: center
-			padding: 0
-			i
-				background-size: 100%
-				width: 1.5em
-				margin: .5em auto
-				
-.icon-arrow-right
-	display: inline-block
-	background: top left url('/images/arrow-right.svg') no-repeat transparent
-	background-size: cover
-	width: 30px
-	height: 30px
-	vertical-align: top
-	margin: 13px 0 0 13px
-.primary .icon-arrow-right
-	background-image: url('/images/arrow-right-red.png')
-.box-adote-um-mapa
-	text-align: center
-	h2
-		font-size: 1.5em
-		margin: 2em 0
-	.button.confirmar
-		col(1)
-		margin-bottom: 2em
-		font-weight: bold
-	.buscar
-		padding: 0
-		img
-			margin-top: 16px
-.form-panel
-	col(8/12, 2/12)
-	margin-bottom: 2em
-	input[type=text], input[type=email]
-		span(9/10)
-		text-align: left
-		margin-bottom: 1.5em
-	.button
-		span(1/10)
-		text-align:center
-		margin-bottom: 1.5em
-	&.small
-		col(6/12, 3/12)
-		input[type=text], input[type=email]
-			span(8/10)
-		.button
-			span(2/10)
-			i
-				margin: 13px 0 0 0
-		h3
-			font-weight: bold
-			font-size: 1.5em
-			margin: 0 0 1em
-			text-align: center
-			color: grapefruit
-#map
-	height: 26em
-	border: .1em solid greyish
-	margin-top: 11em
-	margin-bottom: 2em
-.em-breve-board
-	col(8/12, 2/12)	
-	background:white;
-	margin-top:5em;
-	margin-bottom:5em;
-	padding: 4em;
-	input, textarea
-		margin-top:2em;
-		padding:0px;
-		border:0px solid white;
-
-			
-	.button
-		margin-top:2em
-	.adesivo-circle
-		col(6/12)
-		background white url("/images/adesivo-circle.png") 50% 50%
-		background-size:cover;
-		display:block
-		float:none;
-		margin-top 2em
-		margin-bottom 2em
-		height:250px;
-		width:250px
-		margin-left: auto
-		margin-right auto
-	h2
-		margin:1em 0
-		text-align center
-		em
-			color:#ED4D51
-	h3
-		margin-top 2em
-		text-align left 
-	p, ul li
-		opacity:.6
-		margin-top:2em 
-		line-height:1.4em
-		text-align left
-	ul li
-		list-style-type: circle;
-		list-style-position: inside;
-		margin:0 !important;
-.success-board
-	margin-top: 5em
-	margin-bottom: 1em
-	padding: 3em
-	background-color: white
-	col(8/12, 2/12)
-	a
-		font-weight: bold
-	.image-featured
-		col(1/3)
-	.text-featured
-		margin-top: 1em
-		col(2/3)
-		h2w
-			font-weight: bold
-			font-size: 1.3em
-			margin-bottom: 1.5em
-	h2
-		font-size 1.5em;
-		margin-bottom:1em
-	p
-		opacity:0.4
-		a
-			text-decoration:underline
-.success-board.instructions
-	margin-top: 0
-	margin-bottom: 2em
-	padding 0
-	.text-featured
-		width:100%
-		margin:0px
-	h2
-		background-color:#9AD2CB
-		margin:0px
-		padding:1em
-		width:100%
-		color:white
-		text-align:center
-		margin-bottom:1em
-	ol
-		padding:1em 3em 3em 5em
-		list-style-type: decimal
-		li
-			margin-bottom:2em
-	
-.row
-	col(1)
-	min-height: 10em
-	padding: 3em 0
-	.featured
-		img
-			max-width: 90%
-
-.row.destaque
-	padding: 5em
-	background-size: cover
-	background-image: url(/images/selected-03840.png)
-	p
-		color: white
-		font-size: 1.7em
-		max-width: 35%
-		margin: 3em 0
-
-.row.como-funciona
-	padding 6em 0
-	background-color: watermelon
-	text-align: center
-	color: #fff
-	h2
-		padding: 0 0 1em
-		font-size: 2em
-	.column
-		col(1/3)
-		padding: 0 1.5em
-		.box-img
-			height: 7em
-			line-height: 7em
-			img
-				vertical-align: middle
-		p
-			margin: 1.5em 0
-			font-size:1.3em
-			font-weight: bold
-			&.description
-				font-weight: normal
-				opacity:0.7
-				font-size: .9em
-
-.row.adote-um-mapa
-	background-color: light-grey-blue
-	.column
-		col(1/2)
-		.description
-			color: white
-			margin: 2em 0
-			font-size:1.4em
-		ul li
-			span(1/2)
-			margin: 1em 0
-			img, p
-				display: inline-block
-			img
-				margin: 0 1em 0 0
-			p
-				margin: 0 .5em 0 0
-				width: 60%
-				vertical-align: top
-				color:#6a908b
-				font-size:0.9em
 
 .row.audio-guia
 	background-color: light-sage
@@ -318,154 +32,24 @@ button
 			margin: 2em 0
 		img
 			max-height: 380px
-.row.conheca
-	background: 50% 50% url('/images/painel-poste.jpg') no-repeat transparent;
-	background-size: cover;
-	.box-ajudar
-		color: white
-		col(5/12, 1/12)
-		padding: 4em 0
-		h2
-			background-color: brownish-red
-			text-transform: uppercase
-			padding: 1.5em 0
-			font-size: 1em
-			text-align: center
-		.item
-			background-color: watermelon
-			col(1)
-			padding: 1em
-			img
-				span(1/3)
-			p
-				padding: 0 0 1em 1em
-				opacity: .5
-				span(2/3)
-				&.title
-					font-weight: bold
-					opacity: 1
-
-
-.row.formato
-	padding 6em 0
-	background-color: #EFEAE4
-	text-align: center
-	h2
-		padding: 0 0 0.6em 0
-	h3
-		padding: 0 0 2.5em 0		
-		opacity	.5
-	.item
-		col(1/4, gutter:0.5)
-		height: 330px;
-		background-color white
-		h3
-			font-size: 1.2em
-			padding: 1em
-			font-weight: bold
-			opacity:1;
-		img
-			max-width: 100%
-		p
-			padding: 0em 1em 1em 1em 
-			opacity: .7
-		&:hover
-			text-decoration:none
-			box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
-			-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-			-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-			box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-		a
-			&:hover
-				text-decoration none
-			
-		
-.row.torne-parceiro
-	background-color: pinkish-grey
-	.column
-		col(1/2)
-		p
-			margin: 2em 0
-			opacity:0.6
-			line-height:1.4em
-		input, textarea, button
-			col(1)
-			padding: 1em
-			margin-bottom:1em
-			height: 3em
-			font-family: Montserrat
-			font-size: 1em
-			line-height: 1em
-		button
-			text-align: center
-		textarea
-			height: 10em
-		
-.nossos-parceiros
-	padding-bottom:5em
-	col(12/12) 
-	.container
-		h2
-			text-align center
-			padding-bottom 1em
-			
-		.parceiro 
-			display: inline;
-			height:220px;
-			background:white
-			text-align:center
-			col(6/24, gutter:0)
-			border: 2px solid #EFEAE4;
-			
-			box-sizing: border-box;
-			
-			&:hover
-				text-decoration:none
-				box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1)
-				-webkit-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-				-moz-box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-				box-shadow: 0px 4px 37px -6px rgba(0,0,0,0.2);
-		#redbull
-			background:white url("/images/parceiros-redbull.png") 50% 50% no-repeat;
-			background-size:80%;
-		#preto-cafe
-			background:white url("/images/parceiros-pretocafe.png") 50% 50% no-repeat;
-			background-size:80%;
-		#ouvidor
-			background:white url("/images/parceiros-ouvidor.png") 50% 50% no-repeat;
-			background-size:80%;
-		#garagem-hamburgueria
-			background:white url("/images/parceiros-garagem.jpg") 50% 50% no-repeat;
-			background-size:80%;
-		#shoot
-			background:white url("/images/parceiros-shoot.png") 50% 50% no-repeat;
-			background-size:80%;			
-	.button
-		display:block;
-		width:35%;
-		min-width:300px;
-		margin:30px auto 0px auto;
 
 .pergunta
-
 	margin-bottom: 1em
 	padding: 3em
 	background-color: white
 	col(8/12, 2/12)
 	text-align: left
-	h3 
+	h3
 		font-weight bold
 		font-size 1.2em
 		margin-bottom 1em
-	p  
+	p
 		opacity:.5
 		line-height 1.4em
 		margin-bottom: 1em
 	a
 		color: watermelon
-		
-	
-		
+
 .row.instagram
 	col(12/12)
 	background-color: rgb(70, 67, 64)
@@ -473,6 +57,7 @@ button
 	h2
 		margin-bottom: 2em
 		color: white
+
 .flash_message
 	col(1)
 	background-color: #dff0d8

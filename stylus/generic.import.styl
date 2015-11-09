@@ -1,0 +1,42 @@
+global-reset()
+
+html
+	box-sizing: border-box
+*, *:before, *:after
+	box-sizing: inherit
+body
+	background-color: light-grey
+	//font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	color: brownish-grey
+	line-height: 1.2
+a
+	text-decoration: none
+	color: brownish-grey
+	&:hover
+		text-decoration: underline
+h2
+	font-weight: bold
+	font-size: 2em
+input, textarea
+	height: 3em
+	border: 0
+	padding: 0 1em
+	font-size: 1.4em
+	font-family: Montserrat
+	color: brownish-grey
+	border-bottom: .3em solid #e3e3e3
+	outline: 0
+button
+	outline: 0
+
+.row
+	col(1)
+	min-height: 10em
+	padding: 3em 0
+	.featured
+		img
+			max-width: 90%
+.container
+	center(960px)
