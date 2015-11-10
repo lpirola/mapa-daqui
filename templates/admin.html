@@ -16,16 +16,35 @@
 </template>
 
 <template name="gerar_em_lote">
-	<p>Gerar em lote</p>
+	<h2>Gerar sinalizações em lote</h2>
 	<form name="gerar-em-lote">
-		<label for="arquivo_csv">arquivo-csv</label><input type="file" name="arquivo_csv" id="arquivo_csv" accept="text/csv">
-
-
-		<p><input type="submit" value="Carregar endereços"></p>
+		<fieldset id="" class="">
+			<legend>Fonte de dados com email e cep</legend>
+			<label for="arquivo_csv">Arquivo CSV</label><input type="file" name="arquivo_csv" id="arquivo_csv" accept="text/csv" required>
+			<input type="submit" value="Carregar endereços" class="button button--small">
+		</fieldset>
 	</form>
-	{{#each prepared_data}}
-	<p>{{email}}  {{cep}}  {{address}}
-		<a href='https://api.mapbox.com/v4/mapadaqui.2586fca1/{{lng}},{{lat}},17/512x512.png32?access_token=pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ'>ver imagem</a>
-		</p>
+	<p><strong>ERROS DE BUSCA DE ENREDEÇO:({{errored_data_size}}/{{uploaded_data_size}})</strong></p>
+	{{#each errored_data}}
+		<p>{{cep}} - {{message}}</p>
 	{{/each}}
+	<p><strong>LISTA DE ENDEREÇOS ENCONTRADOS({{prepared_data_size}}/{{uploaded_data_size}})</strong></p>
+	<table border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<th>Email</th>
+			<th>CEP</th>
+			<th>Endereço</th>
+			<th>Image</th>
+		</tr>
+	{{#each prepared_data}}
+		<tr>
+			<td>{{email}}</td>
+			<td>{{cep}}</td>
+			<td>{{address}}</td>
+			<td><a href='https://api.mapbox.com/v4/mapadaqui.2586fca1/{{lng}},{{lat}},17/512x512.png32?access_token=pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ' target="_blank">ver</a></td>
+		</tr>
+	{{/each}}
+	</table>
+	<a href="#" id="download_all_prepared" class="button button--small">salvar e baixar todos</a>
+	<p><strong>LISTA DE ENDEREÇOS SALVOS({{saved_data_size}}/{{prepared_data_size}})</strong></p>
 </template>
