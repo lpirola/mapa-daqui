@@ -23,4 +23,9 @@
 
 		<p><input type="submit" value="Carregar endereços"></p>
 	</form>
+	{{#each prepared_data}}
+	<p>{{email}}  {{cep}}  {{address}}
+		<a href='https://api.mapbox.com/v4/mapadaqui.2586fca1/{{lng}},{{lat}},17/512x512.png32?access_token=pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ'>ver imagem</a>
+		</p>
+	{{/each}}
 </template>

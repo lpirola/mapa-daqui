@@ -23,18 +23,51 @@ Template.remover_sinalizacao.events({
 	}
 });
 
+Session.setDefault('uploaded_csv', []);
+Session.setDefault('prepared_data', []);
+
+Template.gerar_em_lote.helpers({
+	prepared_data: function () {
+		return Session.get('prepared_data');
+	}
+});
+
 Template.gerar_em_lote.events({
 	'submit form': function(evt) {
 		var file = evt.target.arquivo_csv.files[0];
-		var reader  = new FileReader();
+		var geocoder = new google.maps.Geocoder();
+		var search_cep = function () {
+			var uploaded = Session.get('uploaded_csv');
+			var prepared = Session.get('prepared_data');
+			var v = _.last(uploaded);
 
-		reader.onloadend = function () {
-			console.log(reader.result);
+			if (parseInt(v.length) > 1) {
+				var email = v[0],
+					cep = v[1].replace(/[^0-9]+/g, '');
+
+				geocoder.geocode({'address': cep}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+						var address = results[0].formatted_address;
+						var loc = [results[0].geometry.location.lat(), results[0].geometry.location.lng()]
+						prepared.push({'email':email, 'cep':cep, 'lat':loc[0], 'lng':loc[1], address: address, created_at: new Date});
+						Session.set('prepared_data', prepared);
+					}
+				});
+			}
+
+			var new_csv = _.initial(uploaded);
+			Session.set('uploaded_csv', new_csv);
+
+			if (_.size(new_csv) >= 0) {
+				setTimeout(search_cep, 1000);
+			}
 		};
-
-		if (file) {
-			reader.readAsText(file);
-		}
+		Papa.parse(file, {
+			complete: function(results) {
+				Session.set('uploaded_csv', results.data);
+				search_cep();
+			}
+		});
 
 		return false;
 	}
