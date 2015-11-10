@@ -9,6 +9,22 @@ var base64_encode = function(file) {
 	// convert binary data to base64 encoded string
 	return new Buffer(bitmap).toString('base64');
 };
+
+TabularTables = {};
+TabularTables.Signs = new Tabular.Table({
+  name: "SignsList",
+  collection: Signs,
+  columns: [
+    {data: "_id", title: "ID"},
+    {data: "sequence", title: "Sequencial"},
+    {data: "email", title: "E-mail"},
+    {data: "address", title: "Endereço"},
+    {data: "lat", title: "Latitude"},
+    {data: "lng", title: "Longitude"},
+    {data: "created_at", title: "Criado em"},
+  ]
+});
+
 Meteor.publish("signs", function () {
 	return Signs.find();
 });

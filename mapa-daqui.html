@@ -18,11 +18,19 @@
 
 <template name="emptyLayout">
 	{{> Template.dynamic template=content}}
-  	{{> Template.dynamic template=bottom}}
+	{{> Template.dynamic template=bottom}}
 </template>
 
 <template name="mainLayout">
-  {{> Template.dynamic template=top}}
-  {{> Template.dynamic template=content}}
-  {{> Template.dynamic template=bottom}}
+	{{> Template.dynamic template=top}}
+	{{> Template.dynamic template=content}}
+	{{> Template.dynamic template=bottom}}
+</template>
+
+<template name="adminLayout">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/dt-1.10.10/datatables.min.css"/>
+	<div class="container" id="admin-page">
+		{{> Template.dynamic template=top}}
+		{{> Template.dynamic template=content}}
+	</div>
 </template>

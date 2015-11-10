@@ -1,11 +1,18 @@
+
+<template name="header_admin">
+	<div class="header_admin">
+		<h1><a href="/admin">Admin Mapa Daqui</a></h1>
+	</div>
+</template>
 <template name="lista_sinalizacoes">
 	<a href="/admin/gerar-em-lote">gerar em lote</a>
 	<a id="completar_sequencial" href="/admin/completar-sequencial">completar número sequencial</a>
-	<ul>
-	{{#each signs}}
-	<li>{{_id}} / {{sequence}} / {{address}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li>
-	{{/each}}
-	</ul>
+	{{> tabular table=TabularTables.Signs class="table table-striped table-bordered table-condensed display"}}
+	<!-- <ul> -->
+	<!-- {{#each signs}} -->
+	<!-- <li>{{_id}} / {{sequence}} / {{address}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li> -->
+	<!-- {{/each}} -->
+	<!-- </ul> -->
 </template>
 
 <template name="remover_sinalizacao">
@@ -19,33 +26,41 @@
 <template name="gerar_em_lote">
 	<h2>Gerar sinalizações em lote</h2>
 	<form name="gerar-em-lote">
-		<fieldset id="" class="">
-			<legend>Fonte de dados com email e cep</legend>
-			<label for="arquivo_csv">Arquivo CSV</label><input type="file" name="arquivo_csv" id="arquivo_csv" accept="text/csv" required>
-			<input type="submit" value="Carregar endereços" class="button button--small">
+		<fieldset id="" class="col-xs-6">
+			<legend>Fonte de dados</legend>
+			<div class="form-group">
+				<label for="arquivo_csv">Arquivo CSV</label><input type="file" name="arquivo_csv" class="form-group" id="arquivo_csv" accept="text/csv" required>
+			</div>
+			<input type="submit" value="Carregar endereços" class="btn btn-primary">
 		</fieldset>
 	</form>
-	<p><strong>ERROS DE BUSCA DE ENREDEÇO:({{errored_data_size}}/{{uploaded_data_size}})</strong></p>
-	{{#each errored_data}}
-		<p>{{cep}} - {{message}}</p>
-	{{/each}}
-	<p><strong>LISTA DE ENDEREÇOS ENCONTRADOS({{prepared_data_size}}/{{uploaded_data_size}})</strong></p>
-	<table border="0" cellspacing="5" cellpadding="5">
-		<tr>
-			<th>Email</th>
-			<th>CEP</th>
-			<th>Endereço</th>
-			<th>Image</th>
-		</tr>
-	{{#each prepared_data}}
-		<tr>
-			<td>{{email}}</td>
-			<td>{{cep}}</td>
-			<td>{{address}}</td>
-			<td><a href='https://api.mapbox.com/v4/mapadaqui.2586fca1/{{lng}},{{lat}},17/512x512.png32?access_token=pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ' target="_blank">ver</a></td>
-		</tr>
-	{{/each}}
+	<div class="col-xs-6">
+		<p class="bg-danger"><strong>ERROS DE BUSCA DE ENREDEÇO:({{errored_data_size}}/{{uploaded_data_size}})</strong></p>
+		{{#each errored_data}}
+			<p class="bg-danger">{{cep}} - {{message}}</p>
+		{{/each}}
+	</div>
+	<div class="col-xs-12">
+		<p class="bg-success"><strong>LISTA DE ENDEREÇOS ENCONTRADOS({{prepared_data_size}}/{{uploaded_data_size}})</strong></p>
+		<table border="0" class="table table-striped table-bordered table-condensed display">
+			<tr>
+				<th>Email</th>
+				<th>CEP</th>
+				<th>Endereço</th>
+				<th>Image</th>
+			</tr>
+		{{#each prepared_data}}
+			<tr>
+				<td>{{email}}</td>
+				<td>{{cep}}</td>
+				<td>{{address}}</td>
+				<td><a href='https://api.mapbox.com/v4/mapadaqui.2586fca1/{{lng}},{{lat}},17/512x512.png32?access_token=pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ' target="_blank">ver</a></td>
+			</tr>
+		{{/each}}
 	</table>
-	<a href="#" id="download_all_prepared" class="button button--small">salvar e baixar todos</a>
-	<p><strong>LISTA DE ENDEREÇOS SALVOS({{saved_data_size}}/{{prepared_data_size}})</strong></p>
+	</div>
+	<div class="col-xs-12">
+		<a href="#" id="download_all_prepared" class="btn btn-success">salvar e baixar todos</a>
+		<p><strong>LISTA DE ENDEREÇOS SALVOS({{saved_data_size}}/{{prepared_data_size}})</strong></p>
+	</div>
 </template>
