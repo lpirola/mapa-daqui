@@ -31,18 +31,13 @@ Meteor.publish("signs", function () {
 Meteor.methods({
 	'addSign': function(address, lat, lng, email) {
 		var now = new Date();
-		var newId = Signs.insert({address: address, lat:lat, lng:lng, email: email, created_at: now});
-		var sequenceNumber = Signs.find({_id: { $gt : newId}}).count();
-		Signs.update({_id:newId} , {$set: {sequence: sequenceNumber}});
-		return newId;
+		return Signs.insert({address: address, lat:lat, lng:lng, email: email, created_at: now, sequence: incrementCounter('countCollection', 'signid')});
 	},
 	'completar_sequencial': function() {
 		var s = Signs.find({}).fetch();
 		var updated = 0;
 		_.each(s, function(v) {
-			var sequenceNumber = Signs.find({_id: { $gt : v._id}}).count();
-			v.sequence = sequenceNumber;
-			Signs.update({_id:v._id}, {$set: {sequence: sequenceNumber}}, function (err, count) {
+			Signs.update({_id:v._id}, {$set: {sequence: incrementCounter('countCollection', 'signid')}}, function (err, count) {
 				updated = updated + parseInt(count);
 			});
 		});
@@ -56,7 +51,6 @@ Meteor.methods({
 	},
 	'generatePdf': function (signId) {
 		var currentSign = Signs.findOne({_id:signId});
-		var sequenceNumber = Signs.find({_id: { $gt : signId}}).count();
 		var locals = {
 			mapbox: {
 					access_token: 'pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ',
@@ -64,7 +58,7 @@ Meteor.methods({
 			},
 			lat : currentSign.lat,
 			lng : currentSign.lng,
-			sequence : sequenceNumber
+			sequence : currentSign.sequence
 		};
 		var htmlOutput = jade.render(Assets.getText('jade/lambe-lambe.jade'), locals);
 		var waitConvert = Async.runSync(function(done) {

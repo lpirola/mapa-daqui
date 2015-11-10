@@ -51,11 +51,13 @@ mobile-status-bar@1.0.6
 momentjs:moment@2.10.6
 mongo@1.1.2
 mongo-id@1.0.1
+mongo-livedata@1.0.9
 mquandalle:stylus@1.1.1
 npm-container@1.2.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+osv:mongo-counter@0.2.1
 package-version-parser@3.0.4
 pauloborges:mapbox@2.1.5
 practicalmeteor:chai@2.1.0_1
