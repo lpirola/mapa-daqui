@@ -13,9 +13,24 @@ Meteor.publish("signs", function () {
 	return Signs.find();
 });
 Meteor.methods({
-	'addSign': function(address, lat, lng) {
+	'addSign': function(address, lat, lng, email) {
 		var now = new Date();
-		return Signs.insert({address: address, lat:lat, lng:lng, email:'', created_at: now});
+		var newId = Signs.insert({address: address, lat:lat, lng:lng, email: email, created_at: now});
+		var sequenceNumber = Signs.find({_id: { $gt : newId}}).count();
+		Signs.update({_id:newId} , {$set: {sequence: sequenceNumber}});
+		return newId;
+	},
+	'completar_sequencial': function() {
+		var s = Signs.find({}).fetch();
+		var updated = 0;
+		_.each(s, function(v) {
+			var sequenceNumber = Signs.find({_id: { $gt : v._id}}).count();
+			v.sequence = sequenceNumber;
+			Signs.update({_id:v._id}, {$set: {sequence: sequenceNumber}}, function (err, count) {
+				updated = updated + parseInt(count);
+			});
+		});
+		return updated;
 	},
 	'removeSign': function(signId) {
 		return Signs.remove(signId);

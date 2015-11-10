@@ -1,8 +1,9 @@
 <template name="lista_sinalizacoes">
 	<a href="/admin/gerar-em-lote">gerar em lote</a>
+	<a id="completar_sequencial" href="/admin/completar-sequencial">completar número sequencial</a>
 	<ul>
 	{{#each signs}}
-	<li>{{apress}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li>
+	<li>{{_id}} / {{sequence}} / {{address}} / {{lat}} / {{lng}} / {{created_at}} / {{email}} <a href="/imprimir-lambe-lambe/{{_id}}">imprimir lambe-lambe</a> - <a href="/admin/excluir-lambe-lambe/{{_id}}">excluir lambe-lambe</a> </li>
 	{{/each}}
 	</ul>
 </template>

@@ -32,7 +32,7 @@ Template.adotar_mapa.events({
 	},
 	'click .button.confirmar': function () {
 		var mapCenter = map.getCenter();
-		Meteor.call('addSign', Session.get('address'), mapCenter.lat, mapCenter.lng, function (error, newSign) {
+		Meteor.call('addSign', Session.get('address'), mapCenter.lat, mapCenter.lng, '', function (error, newSign) {
 			FlowRouter.go('/imprimir-lambe-lambe/' + newSign);
 		});
 		return false;

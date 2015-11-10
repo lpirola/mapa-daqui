@@ -4,6 +4,15 @@ Template.lista_sinalizacoes.helpers({
 	}
 });
 
+Template.lista_sinalizacoes.events({
+	'click #completar_sequencial': function(evt) {
+		Meteor.call('completar_sequencial', function (err, results) {
+			console.log(results, err);
+		});
+		return false;
+	}
+});
+
 Template.remover_sinalizacao.events({
 	'click input[type=radio]': function(evt) {
 		var confirmado = evt.target.value,
@@ -56,7 +65,7 @@ Template.gerar_em_lote.events({
 			var prepared = Session.get('prepared_data');
 			var saved = Session.get('saved_data');
 			var v = _.last(prepared);
-			Meteor.call('addSign', v.address, v.lat, v.lng, function (error, newSign) {
+			Meteor.call('addSign', v.address, v.lat, v.lng, v.email, function (error, newSign) {
 				Meteor.call('generatePdf', newSign, function (error2, result) {
 					download("data:application/pdf;base64," + result, newSign + '.pdf', "application/pdf");
 				});
@@ -87,7 +96,7 @@ Template.gerar_em_lote.events({
 					if (status === google.maps.GeocoderStatus.OK) {
 						var address = results[0].formatted_address;
 						var loc = [results[0].geometry.location.lat(), results[0].geometry.location.lng()]
-						prepared.push({'email':email, 'cep':cep, 'lat':loc[0], 'lng':loc[1], address: address, created_at: new Date});
+						prepared.push({'email':email, 'cep':cep, 'lat':loc[0], 'lng':loc[1], address: address});
 						Session.set('prepared_data', prepared);
 					} else {
 						var errored = Session.get('errored_data');
