@@ -121,12 +121,18 @@ Template.gerar_em_lote.events({
 			var uploaded = Session.get('uploaded_data');
 			var prepared = Session.get('prepared_data');
 			var v = _.last(uploaded);
+			if ((typeof v !== 'undefined') && (_.size(v) > 1)) {
+				console.log(v);
+				var email    = v.Email,
+					endereco = v.Endereco + ' ',
+					cep      = v.CEP.replace(/[^0-9]+/g, '') + ' ',
+					bairro   = v.Bairro + ' ',
+					numero   = v.Numero + ' ',
+					cidade   = v.Cidade + ' ',
+					estado   = v.Estado + ' ',
+					pais     = v.Pais;
 
-			if ((typeof v !== 'undefined') && (parseInt(v.length) > 1)) {
-				var email = v[0],
-					cep = v[1].replace(/[^0-9]+/g, '');
-
-				geocoder.geocode({'address': cep}, function(results, status) {
+				geocoder.geocode({'address': endereco + numero + bairro + cidade + estado + cep + pais}, function(results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var address = results[0].formatted_address;
 						var loc = [results[0].geometry.location.lat(), results[0].geometry.location.lng()]
@@ -148,6 +154,7 @@ Template.gerar_em_lote.events({
 			}
 		};
 		Papa.parse(file, {
+			header: true,
 			complete: function(results) {
 				Session.set('uploaded_data', results.data);
 				Session.set('uploaded_data_size', _.size(results.data));
