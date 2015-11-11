@@ -122,16 +122,15 @@ Template.gerar_em_lote.events({
 			var prepared = Session.get('prepared_data');
 			var v = _.last(uploaded);
 			if ((typeof v !== 'undefined') && (_.size(v) > 1)) {
-				console.log(v);
-				var email    = v.Email,
-					endereco = v.Endereco + ' ',
+				var email    = s(v.Email).trim().value(),
+					endereco = s(v.Endereco).trim().value() + ' ',
 					cep      = v.CEP.replace(/[^0-9]+/g, '') + ' ',
-					bairro   = v.Bairro + ' ',
-					numero   = v.Numero + ' ',
-					cidade   = v.Cidade + ' ',
-					estado   = v.Estado + ' ',
-					pais     = v.Pais;
-
+					bairro   = s(v.Bairro).trim().value() + ' ',
+					numero   = s(v.Numero).trim().value() + ' ',
+					cidade   = s(v.Cidade).trim().value() + ' ',
+					estado   = s(v.Estado).trim().value() + ' ',
+					pais     = s(v.Pais).trim().value();
+				console.log(v, endereco + numero + bairro + cidade + estado + cep + pais);
 				geocoder.geocode({'address': endereco + numero + bairro + cidade + estado + cep + pais}, function(results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var address = results[0].formatted_address;
