@@ -56,6 +56,7 @@ var search_cep = function () {
 			cidade   = s(v.Cidade).trim().value() + ' ',
 			estado   = s(v.Estado).trim().value() + ' ',
 			pais     = s(v.Pais).trim().value();
+		var geocoder = new google.maps.Geocoder();
 		geocoder.geocode({'address': endereco + numero + bairro + cidade + estado + cep + pais}, function(results, status) {
 			if (status === google.maps.GeocoderStatus.OK) {
 				var address = results[0].formatted_address;
@@ -84,7 +85,6 @@ Template.gerar_em_lote.events({
 	},
 	'submit form': function(evt) {
 		var file = evt.target.arquivo_csv.files[0];
-		var geocoder = new google.maps.Geocoder();
 		Papa.parse(file, {
 			header: true,
 			complete: function(results) {
