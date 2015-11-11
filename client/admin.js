@@ -97,15 +97,13 @@ Template.gerar_em_lote.events({
 			var prepared = Session.get('prepared_data');
 			var saved = Session.get('saved_data');
 			var v = _.last(prepared);
-			if ((typeof v !== 'undefined') && (parseInt(v.length) > 1)) {
-				Meteor.call('addSign', v.address, v.lat, v.lng, v.email, function (error, newSign) {
-					Meteor.call('generatePdf', newSign, function (error2, result) {
-						saved.push(newSign);
-						Session.set('saved_data', saved);
-						download("data:application/pdf;base64," + result, newSign + '.pdf', "application/pdf");
-					});
+			Meteor.call('addSign', v.address, v.lat, v.lng, v.email, function (error, newSign) {
+				Meteor.call('generatePdf', newSign, function (error2, result) {
+					saved.push(newSign);
+					Session.set('saved_data', saved);
+					download("data:application/pdf;base64," + result, newSign + '.pdf', "application/pdf");
 				});
-			}
+			});
 			var new_prepared = _.initial(prepared);
 			Session.set('prepared_data', new_prepared);
 
