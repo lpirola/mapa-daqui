@@ -36,15 +36,6 @@ Template.lista_sinalizacoes.helpers({
 	}
 });
 
-Template.lista_sinalizacoes.events({
-	'click #completar_sequencial': function(evt) {
-		Meteor.call('completar_sequencial', function (err, results) {
-			console.log(results, err);
-		});
-		return false;
-	}
-});
-
 Template.remover_sinalizacao.events({
 	'click input[type=radio]': function(evt) {
 		var confirmado = evt.target.value,
@@ -130,7 +121,6 @@ Template.gerar_em_lote.events({
 					cidade   = s(v.Cidade).trim().value() + ' ',
 					estado   = s(v.Estado).trim().value() + ' ',
 					pais     = s(v.Pais).trim().value();
-				console.log(v, endereco + numero + bairro + cidade + estado + cep + pais);
 				geocoder.geocode({'address': endereco + numero + bairro + cidade + estado + cep + pais}, function(results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var address = results[0].formatted_address;
