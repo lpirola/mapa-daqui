@@ -1,4 +1,4 @@
-Template.home.events({
+Template.torne_parceiro.events({
 	'submit form' : function () {
 		Meteor.call('sendEmail', Session.get('nome_parceiro'), Session.get('mensagem_parceiro'), function (error, result) {
 			if (error === undefined) {
