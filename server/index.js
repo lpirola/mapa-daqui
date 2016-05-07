@@ -74,6 +74,19 @@ Meteor.methods({
 		});
 		return waitConvert.result;
 	},
+	'previewPdf': function (template, signId) {
+		var currentSign = Signs.findOne({_id:signId});
+		var locals = {
+			mapbox: {
+					access_token: 'pk.eyJ1IjoibWFwYWRhcXVpIiwiYSI6IjBiNDkyMjNjOTI2MGYzOGM3YmVlMTdmYjUxZWM3YjNlIn0.wgKsb3mWtdUBhA8CYRWvKQ',
+					map_name: 'mapadaqui.2586fca1'
+			},
+			lat : currentSign.lat,
+			lng : currentSign.lng,
+			sequence : currentSign.sequence
+		};
+		return jade.render(Assets.getText('jade/'+template+'.jade'), locals);
+	},
 	sendEmail: function (name, text) {
 		check([name, text], [String]);
 
