@@ -13,7 +13,6 @@ meteorhacks:npm
 
 
 npm-container
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -35,3 +34,5 @@ aldeed:tabular
 momentjs:moment
 osv:mongo-counter
 underscorestring:underscore.string
+standard-minifier-css
+standard-minifier-js
