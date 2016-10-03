@@ -11,6 +11,6 @@ Session.setDefault('pdf_content', '<html></html>')
 
 var map;
 Meteor.startup(function() {
-	GoogleMaps.load();
+	GoogleMaps.load({key:'AIzaSyBZFq6gqdnXEQpi7IDtSTVRc70CAg6fTAs'});
 	Mapbox.load();
 });
